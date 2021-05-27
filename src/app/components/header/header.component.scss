@@ -1,0 +1,298 @@
+header {
+    background: #000;
+
+    @media (max-width: 1105px) {
+        position: fixed;
+        width: 100%;
+        height: 70px;
+        z-index: 10;
+        top: 0;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        width: 1242px;
+        margin: auto;
+        height: 60px;
+
+        @media (max-width: 1105px) {
+            width: 100%;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #fff;
+
+            h1 {
+                text-transform: uppercase;
+                font-size: 40px;
+                letter-spacing: 0.1px;
+
+                @media (max-width: 1105px) {
+                    margin: 10px;
+                }
+            }
+        }
+
+        nav {
+
+            @media (max-width: 1105px) {
+                width: 0;
+                height: 0;
+            }
+
+            .contacts-menu {
+                display: none;
+            }
+            
+            label {
+                .img {
+                    height: 40px;
+                    width: 40px;
+                    cursor: pointer;
+                    visibility: hidden;
+                    display: none;
+                    // background: url(./../img/menu-icon-1.png) no-repeat;
+                    background-size: 100%;
+                    background-position: center;
+                    margin: 17px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    @media (max-width: 1105px) {
+                        display: block;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            .toggle {
+                width: 40px;
+                height: 40px;
+                visibility: hidden;
+                display: none;
+
+                @media (max-width: 1105px) {
+                    &~ul {
+                        transform: translateX(-200%);
+                        flex-direction: column;
+                        text-align: end;
+                    }
+                }
+
+                &:checked~label {
+                    .img {
+                        // background: url(./../img/menu-icon-close.png) no-repeat;
+                        background-size: 100%;
+                        background-position: center;
+                    }
+                }
+            
+                &:checked~ul {
+                    display: block;
+                    position: relative;
+                    z-index:3;
+                    color: #fff;
+                    background-color: rgba(100, 83, 70, 0.98);
+                    font-weight: 800;
+                    width: 100%;
+
+                    @media (max-width: 1105px) {
+                        transform: translateX(0);
+                        transition: 0.4s;
+                        position: absolute;
+                        top: 69px;
+                        right: 0;
+                        text-align: start;
+                        flex-direction: column;
+                        height: 100vh;
+
+                        li {
+                            font-size: 40px;
+                            padding: 30px 5px 25px;
+
+                            @media (max-width: 767px) {
+                                padding: 16px 5px 15px;
+                            }
+
+                            @media (max-width: 374px) {
+                                padding: 12px 5px 10px;
+                            }
+                        }
+
+                        .contacts-menu {
+                            display: block;
+                            .info {
+                                .info-content {
+                                    display: flex;
+                                    margin: 45px 36px 45px 0;
+                
+                                    @media (max-width: 1105px) {
+                                        margin: 20px 0;
+                                    }
+
+                                    @media (max-width: 767px) {
+                                        margin: 10px 0;
+                                    }
+
+                                    .cont-text {
+                                        padding: 0 16px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        font-size: 18px;
+                                        justify-content: space-evenly;
+                
+                                        p {
+                                            font-weight: 600;
+                
+                                            &:last-child {
+                                                @media (max-width: 425px) {
+                                                    font-size: 14px;
+                                                }
+                
+                                                @media (max-width: 320px) {
+                                                    font-size: 10px;
+                                                }
+                                            }
+                                        }
+                
+                                        span {
+                                            font-weight: 100;
+                                            line-height: 17px;
+
+                                            @media (max-width: 425px) {
+                                                font-size: 14px;
+                                            }
+                
+                                            @media (max-width: 320px) {
+                                                font-size: 12px;
+                                            }
+                                        }
+                
+                                        .text-phones {
+                                            display: flex;
+                                            align-items: center;
+                                            
+                                            .num-phones {
+                                                display: flex;
+                                                flex-direction: column;
+                                                
+                                                span {
+                                                    font-size: 18px;
+                
+                                                    @media (max-width: 425px) {
+                                                        font-size: 14px;
+                                                    }
+                
+                                                    @media (max-width: 320px) {
+                                                        font-size: 12px;
+                                                    }
+                                                }
+                                            }
+                
+                                            .icons-phones {
+                                                padding-left: 23px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media (max-width: 374px) {
+                        li {
+                            font-size: 28px;
+                        }
+                    }
+
+                    @media (min-width: 1106px) {
+                        display: flex;
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                list-style: none;
+
+                @media (min-width: 1106px) {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                li {
+                    font-size: 12px;
+                    padding: 5px;
+                    letter-spacing: 0.5px;
+                    line-height: 14px;
+
+                    &:first-child::before {
+                        display: none;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        margin-left: -5px;
+                        margin-top: 2px;
+                        width: 1px;
+                        height: 10px;
+                        background-color: #fff;
+
+                        @media (max-width: 1105px) {
+                            display: none;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-family: 'Roboto';
+                        font-weight: 300;
+                        font-style: normal;
+
+                        &:focus, &:hover {
+                            color: #FE8C00;
+                        }
+                    }
+                }
+            }
+        }
+
+        .phones {
+            display: flex;
+            font-size: 23px;
+            align-items: center;
+
+            @media (max-width: 1105px) {
+                display: none;
+            }
+
+            a {
+                padding: 0 7px 0 0;
+                display: flex;
+            }
+
+            .phones-number {
+                font-weight: 600;
+                letter-spacing: -0.5px;
+            }
+        }
+
+        .reload {
+            border: none;
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: rgb(58, 116, 0);
+            color: #fff;
+        }
+
+    }
+}
+
