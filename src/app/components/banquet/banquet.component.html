@@ -1,1 +1,29 @@
-<p>banquet works!</p>
+<div class="banquet" id='banquet'>
+    <div class="banquet-container">
+        <div class="banquet-container--header">
+            <div><img src="./assets/banq-header-line.png" alt=""></div>
+            <div><p>Банкетный зал</p></div>
+            <div><img src="./assets/banq-header-line.png" alt=""></div>
+        </div>
+        <div class="banquet-container--content">
+            <div class="hall-title">
+                <p>Изысканный интерьер для проведения незабываемых мероприятий</p>
+            </div>
+
+            <div class="banquet-hall-btns">
+                <input type="radio" id="hall-1" name="halls" value="hall-1" routerLink='/first-hall' checked>
+                <label class="btn-hall" for="hall-1">
+                    <div class="label-icon"><span>Зал на Х человек</span></div>
+                </label>
+                <input type="radio" id="hall-2" name="halls" value="hall-2" routerLink='/second-hall'>
+                <label class="btn-hall" for="hall-2">
+                    <div class="label-icon"><span>Зал на Х человек</span></div>
+                </label>
+            </div>
+
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

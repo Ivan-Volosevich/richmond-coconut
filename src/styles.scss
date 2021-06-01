@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './assets/fonts/OpenSans/stylesheet.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans";
+  font-style: normal;
+}
+  
+
+
+button {
+  cursor: pointer;
+  font-family: "Open Sans";
+  font-style: normal;
+}
+
+button, label, input, a, select, svg, img {
+  &:active, &:hover, &:focus {
+      outline: 0 !important;
+      outline-offset: 0 !important;
+  }
+}
