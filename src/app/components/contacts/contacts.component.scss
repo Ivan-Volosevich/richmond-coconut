@@ -1,0 +1,241 @@
+.contacts {
+    height: 648px;
+    width: 100%;
+    background-color: #000;
+
+    @media (max-width: 1270px) {
+        height: 100%;
+    }
+
+    .contacts-container {
+        color: #fff;
+        width: 1225px;
+        margin: auto;
+
+        @media (max-width: 1270px) {
+            width: 98%;
+        }
+
+        .contacts-container--header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                img {
+                    @media (max-width: 767px) {
+                        width: 120px;
+                    }
+
+                    @media (max-width: 425px) {
+                        width: 60px;
+                    }
+                }
+            }
+
+            div {
+                p {
+                    font-size: 42px;
+                    font-weight: 700;
+                    padding: 54px 13px 40px;
+                    text-align: center;
+
+                    br {
+                        display: none;
+
+                        @media (max-width: 573px) {
+                            display: block;
+                        }
+                    }
+
+                    @media (max-width: 1023px) {
+                        font-size: 38px;
+                    }
+
+                    @media (max-width: 905px) {
+                        font-size: 30px;
+                        padding: 24px 10px 20px;
+                    }
+
+                    @media (max-width: 767px) {
+                        font-size: 26px;
+                    }
+
+                    @media (max-width: 425px) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .contacts-container--content {   
+            display: none; 
+            // display: flex;
+            // justify-content: space-between;
+            
+            @media (max-width: 1023px) {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contacts-container--left {
+                display: flex;
+        
+                .contacts-main-image {
+                    position: relative;
+                    z-index: 2;
+        
+                    img {
+                        z-index: 2;
+                    }
+        
+                    .contacts-frame {
+                        position: absolute;
+                        z-index: -1;
+                        top: 15px;
+                        left: 15px;
+                    }
+                }
+        
+                @media (max-width: 1270px) {
+                    width: 48vw;
+                    padding-left: 15px;
+        
+                    .contacts-main-image {
+                        img {
+                            width: 330px;
+                        }
+                    }
+                }
+        
+                @media (max-width: 1023px) {
+                    justify-content: center;
+                    padding-left: 0;
+                }
+        
+                @media (max-width: 532px) {
+                    flex-direction: column;
+                    align-items: center;
+        
+                    .contacts-main-image {
+                        img {
+                            width: 300px;
+                        }
+                    }
+                }
+        
+                @media (max-width: 424px) {
+                    .contacts-main-image {
+                        img {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+
+            .contacts-container--right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 560px;
+
+                @media (max-width: 1023px) {
+                    width: 98%;
+                }
+
+                .contacts-text {
+                    .contacts-text--second {
+                        width: 375px;
+
+                        @media (max-width: 1023px) {
+                            width: 98%;
+                        }
+                    }
+
+                    p {
+                        font-size: 22px;
+                        font-weight: 400;
+                        margin-bottom: 31px;
+
+                        @media (max-width: 1270px) {
+                            font-size: 20px;
+                        }
+
+                        @media (max-width: 650px) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .contacts-icons {
+                    display: flex;
+                    justify-content: space-between;
+
+                    @media (max-width: 1270px) {
+                        margin-bottom: 20px;
+                    }
+
+                    @media (max-width: 650px) {
+                        margin-left: 50px;
+                    }
+
+                    @media (max-width: 424px) {
+                        margin-left: 5px;
+                    }
+
+                    @media (max-width: 374px) {
+                        margin-left: 28px;
+                        margin-right: 25px;
+                    }
+
+                    .icon-container {
+                        display: flex;
+                        align-items: center;
+
+                        div {
+                            @media (max-width: 650px) {
+                                width: 60px;
+                            }
+                        }
+
+                        @media (max-width: 1023px) {
+                            padding-left: 25px;
+                        }
+
+                        @media (max-width: 650px) {
+                            padding-left: 0;
+                        }
+
+                        .icon-container--text {
+                            width: 190px;
+                            padding-left: 10px;
+                            p {
+                                font-size: 18px;
+                                font-weight: 300;
+                            }
+
+                            @media (max-width: 1023px) {
+                                width: 98%;
+                                padding-left: 25px;
+                            }
+
+                            @media (max-width: 436px) {
+                                width: 172px;
+                            }
+
+                            @media (max-width: 650px) {
+                                p {
+                                    font-size: 15px;
+
+                                    br {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

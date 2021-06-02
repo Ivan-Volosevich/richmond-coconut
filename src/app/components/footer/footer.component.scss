@@ -1,0 +1,39 @@
+.footer {
+    background-color: #000;
+    height: 126px;
+    text-align: center;
+
+    @media (max-width: 1270px) {
+        height: 100%;
+    }
+
+    .footer-img {
+        margin: auto;
+
+        @media (max-width: 1700px) {
+            
+            img {
+                width: 80%;
+            }
+        }
+    }
+
+    .footer-text {
+        margin: auto;
+        padding: 39px 0;
+        font-size: 16px;
+        font-weight: 300;
+        color: #fff;
+
+        @media (max-width: 1270px) {
+            padding: 0 0 15px;
+        }
+
+        span {
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+}
