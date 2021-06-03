@@ -23,6 +23,12 @@
 
             div {
                 img {
+                    margin-top: 60px;
+
+                    @media (max-width: 905px) {
+                        margin-top: 0;
+                    }
+
                     @media (max-width: 767px) {
                         width: 120px;
                     }
@@ -37,7 +43,7 @@
                 p {
                     font-size: 42px;
                     font-weight: 700;
-                    padding: 54px 13px 40px;
+                    padding: 51px 17px 6px;
                     text-align: center;
 
                     @media (max-width: 1023px) {
@@ -66,9 +72,11 @@
             .gallery-title {
                 font-size: 22px;
                 font-weight: 700;
+                margin-bottom: 46px;
 
                 @media (max-width: 767px) {
                     font-size: 16px;
+                    margin-bottom: 20px;
                 }
             }
 
@@ -157,7 +165,7 @@
                 .slider-nav {
                     display: flex;
                     justify-content: space-between;
-                    margin: 44px auto 92px;
+                    margin: 31px auto 92px;
                     width: 95px;
 
                     @media (max-width: 1270px) {

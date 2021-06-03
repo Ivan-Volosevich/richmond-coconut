@@ -18,6 +18,8 @@ export class GalleryComponent implements OnInit {
 
   images: any;
 
+  value: string = 'gallery-nav1';
+
   constructor() { }
 
   ngOnInit(): void {

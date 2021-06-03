@@ -37,7 +37,7 @@
                 p {
                     font-size: 42px;
                     font-weight: 700;
-                    padding: 54px 13px 40px;
+                    padding: 54px 13px 43px;
                     text-align: center;
 
                     br {
@@ -137,7 +137,7 @@
                     }
                     
                     .hotel-lil-image {
-                        margin: 0 40px 6px;
+                        margin: 0px 26px 13px 50px;
         
                         @media (max-width: 1270px) {
                             margin-left: 25%;
@@ -168,7 +168,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
-                width: 560px;
+                width: 581px;
 
                 @media (max-width: 1023px) {
                     width: 98%;
@@ -176,7 +176,7 @@
 
                 .hotel-text {
                     .hotel-text--second {
-                        width: 375px;
+                        width: 380px;
 
                         @media (max-width: 1023px) {
                             width: 98%;
@@ -184,9 +184,9 @@
                     }
 
                     p {
-                        font-size: 22px;
+                        font-size: 24px;
                         font-weight: 400;
-                        margin-bottom: 31px;
+                        margin-bottom: 26px;
 
                         @media (max-width: 1270px) {
                             font-size: 20px;

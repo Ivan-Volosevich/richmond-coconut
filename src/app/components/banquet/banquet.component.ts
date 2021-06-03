@@ -6,14 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banquet.component.scss']
 })
 export class BanquetComponent implements OnInit {
-  public show:boolean = false;
+
+  value: string = 'hall-1';
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  showHall() {
-    this.show = true;
   }
 }

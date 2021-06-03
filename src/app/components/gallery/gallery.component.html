@@ -10,7 +10,7 @@
                 <p>Приходите к нам насладиться отличной музыкой и изысканными блюдами</p>
             </div>
             <div class="gallery-slider">
-                <div class="gallery-images">
+                <div *ngIf="value === 'gallery-nav1'" class="gallery-images">
                     <div class="post-1">
                         <img src="./assets/gallery-img-1.png" alt="">
                     </div>
@@ -30,21 +30,61 @@
                         <img src="./assets/gallery-img-6.png" alt="">
                     </div>
                 </div>
+                <div *ngIf="value === 'gallery-nav2'" class="gallery-images">
+                    <div class="post-1">
+                        <img src="./assets/gallery-img-2.png" alt="">
+                    </div>
+                    <div class="post-2">
+                        <img src="./assets/gallery-img-1.png" alt="">
+                    </div>
+                    <div class="post-3">
+                        <img src="./assets/gallery-img-3.png" alt="">
+                    </div>
+                    <div class="post-4">
+                        <img src="./assets/gallery-img-4.png" alt="">
+                    </div>
+                    <div class="post-5">
+                        <img src="./assets/gallery-img-5.png" alt="">
+                    </div>
+                    <div class="post-6">
+                        <img src="./assets/gallery-img-6.png" alt="">
+                    </div>
+                </div>
+                <div *ngIf="value === 'gallery-nav3'" class="gallery-images">
+                    <div class="post-1">
+                        <img src="./assets/gallery-img-1.png" alt="">
+                    </div>
+                    <div class="post-2">
+                        <img src="./assets/gallery-img-2.png" alt="">
+                    </div>
+                    <div class="post-3">
+                        <img src="./assets/gallery-img-3.png" alt="">
+                    </div>
+                    <div class="post-4">
+                        <img src="./assets/gallery-img-4.png" alt="">
+                    </div>
+                    <div class="post-5">
+                        <img src="./assets/gallery-img-6.png" alt="">
+                    </div>
+                    <div class="post-6">
+                        <img src="./assets/gallery-img-5.png" alt="">
+                    </div>
+                </div>
                 <div class="slider-nav">
                     <div class="nav-first">
-                        <input type="radio" id="gallery-nav1" name="gallery-nav" value="gallery-nav1"checked>
+                        <input type="radio" id="gallery-nav1" name="gallery-nav" value="gallery-nav1" [(ngModel)]="value">
                         <label class="btn-gallery" for="gallery-nav1">
                             <div class="label-icon"><span>1</span></div>
                         </label>
                     </div>
                     <div class="nav-second">
-                        <input type="radio" id="gallery-nav2" name="gallery-nav" value="gallery-nav2">
+                        <input type="radio" id="gallery-nav2" name="gallery-nav" value="gallery-nav2" [(ngModel)]="value">
                         <label class="btn-gallery" for="gallery-nav2">
                             <div class="label-icon"><span>2</span></div>
                         </label>
                     </div>
                     <div class="nav-third">
-                        <input type="radio" id="gallery-nav3" name="gallery-nav" value="gallery-nav3">
+                        <input type="radio" id="gallery-nav3" name="gallery-nav" value="gallery-nav3" [(ngModel)]="value">
                         <label class="btn-gallery" for="gallery-nav3">
                             <div class="label-icon"><span>3</span></div>
                         </label>
