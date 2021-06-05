@@ -8,15 +8,15 @@ import { OwlCarousel } from 'ngx-owl-carousel';
 })
 export class GalleryComponent implements OnInit {
 
-  Images = [
-    '../../../assets/gallery-img-1.png',
-    '../../../assets/gallery-img-2.png',
-    '../../../assets/gallery-img-3.png',
-    '../../../assets/gallery-img-4.png',
-    '../../../assets/gallery-img-5.png',
-    '../../../assets/gallery-img-6.png'];
+  // Images = [
+  //   '../../../assets/gallery-img-1.png',
+  //   '../../../assets/gallery-img-2.png',
+  //   '../../../assets/gallery-img-3.png',
+  //   '../../../assets/gallery-img-4.png',
+  //   '../../../assets/gallery-img-5.png',
+  //   '../../../assets/gallery-img-6.png'];
 
-  images: any;
+  // images: any;
 
   value: string = 'gallery-nav1';
 
@@ -25,7 +25,7 @@ export class GalleryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  SlideOptions = { items: 1, dots: true, nav: true };  
-  CarouselOptions = { items: 3, dots: true, nav: true };
+  // SlideOptions = { items: 1, dots: true, nav: true };  
+  // CarouselOptions = { items: 3, dots: true, nav: true };
 
 }
