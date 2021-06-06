@@ -17,6 +17,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopupDialogComponent } from './components/popup-dialog/popup-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     GalleryComponent,
     ContactsComponent,
     FooterComponent,
+    PopupDialogComponent,
   ],
   imports: [
     BrowserModule,
