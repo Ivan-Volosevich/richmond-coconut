@@ -55,7 +55,7 @@ header {
                     cursor: pointer;
                     visibility: hidden;
                     display: none;
-                    background: url(./../../../assets/menu-icon-1.png) no-repeat;
+                    background: url(./../../../assets/menu-icon-open.png) no-repeat;
                     background-size: 100%;
                     background-position: center;
                     margin: 10px;
@@ -86,9 +86,13 @@ header {
 
                 &:checked~label {
                     .img {
+                        height: 20px;
+                        width: 20px;
                         background: url(./../../../assets/menu-icon-close.png) no-repeat;
                         background-size: 100%;
                         background-position: center;
+                        margin-top: 20px;
+                        margin-right: 20px;
                     }
                 }
             
