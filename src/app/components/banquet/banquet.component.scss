@@ -40,7 +40,7 @@
             }
 
             div {
-                p {
+                h2 {
                     font-size: 42px;
                     font-weight: 700;
                     padding: 54px 5px 2px;
@@ -60,7 +60,7 @@
                     }
                     
                     @media (max-width: 425px) {
-                        font-size: 18px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -70,11 +70,14 @@
             text-align: center;
 
             .hall-title {
-                font-size: 22px;
-                font-weight: 700;
+                
+                h3 {
+                    font-size: 22px;
+                    font-weight: 700;
 
-                @media (max-width: 767px) {
-                    font-size: 16px;
+                    @media (max-width: 767px) {
+                        font-size: 16px;
+                    }
                 }
             }
 

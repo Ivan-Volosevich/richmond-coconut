@@ -38,7 +38,7 @@
             }
 
             div {
-                p {
+                h2 {
                     font-size: 42px;
                     font-weight: 700;
                     padding: 51px 13px 48px;
@@ -58,7 +58,7 @@
                     }
 
                     @media (max-width: 425px) {
-                        font-size: 18px;
+                        font-size: 20px;
                     }
                 }
             }
