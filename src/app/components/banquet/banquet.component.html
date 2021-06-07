@@ -8,20 +8,10 @@
         <div class="banquet-container--content">
             <div class="hall-title">
                 <h3>Изысканный интерьер для проведения незабываемых мероприятий</h3>
+                <h4>Зал на 120 человек</h4>
             </div>
 
-            <div class="banquet-hall-btns">
-                <input type="radio" id="hall-1" name="halls" value="hall-1" [(ngModel)]="value">
-                <label class="btn-hall" for="hall-1">
-                    <div class="label-icon"><span>Зал на Х человек</span></div>
-                </label>
-                <input type="radio" id="hall-2" name="halls" value="hall-2" [(ngModel)]="value">
-                <label class="btn-hall" for="hall-2">
-                    <div class="label-icon"><span>Зал на Х человек</span></div>
-                </label>
-            </div>
-
-            <div *ngIf="value === 'hall-1'" class="banquet-first-hall">
+            <div class="banquet-first-hall">
                 <div class="banquet-container--left">
                     <div class="banquet-main-image">
                         <img src="./assets/banquet-first-img.png" alt="">
@@ -56,30 +46,6 @@
                             <br>
                             - профессиональное световое и звуковое оборудование
                         </p>
-                    </div>
-                    <div class="banquet-btn">
-                        <button class="btn-booking" data-modal="Забронировать"><img src="./assets/btn-booking.png" alt=""></button>
-                    </div>
-                </div>
-            </div>
-
-            <div *ngIf="value === 'hall-2'" class="banquet-second-hall">
-                <div class="banquet-container--left">
-                    <div class="banquet-main-image">
-                        <img src="./assets/banquet-first-img.png" alt="">
-                        <div class="banquet-frame">
-                            <img src="./assets/banquet-first-frame.png" alt="">
-                        </div>
-                    </div>
-                    <div class="banquet-lil-images">
-                        <div class="banquet-lil-image"><img src="./assets/banq-lil-1.png" alt=""></div>
-                        <div class="banquet-lil-image"><img src="./assets/banq-lil-2.png" alt=""></div>
-                        <div class="banquet-lil-image"><img src="./assets/banq-lil-3.png" alt=""></div>
-                    </div>
-                </div>
-                <div class="banquet-container--right">
-                    <div class="banquet-text">
-                        <p>Описание зала 2orem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ratione sapiente assumenda sunt et fuga, maxime libero quae totam ex vitae ullam facere blanditiis eligendi labore consectetur voluptates vel natus a porro voluptate. Ex, sint alias obcaecati recusandae suscipit ipsam fuga iusto accusamus provident minus omnis ipsum quod, quas, repudiandae odio exercitationem voluptatum sed. Lorem</p>
                     </div>
                     <div class="banquet-btn">
                         <button class="btn-booking" data-modal="Забронировать"><img src="./assets/btn-booking.png" alt=""></button>

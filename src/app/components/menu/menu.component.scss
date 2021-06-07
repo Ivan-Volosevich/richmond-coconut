@@ -68,6 +68,13 @@
 
         .menu-container--content {
             text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+                align-items: center;
+            }
 
             .menu-container--left {
 
@@ -85,23 +92,46 @@
                         justify-content: space-between;
 
                         .menu-list-top {
-                            margin-top: 62px;
 
-                            .list-text {
-                                font-size: 18px;
-                                font-weight: 700;
-                                padding-bottom: 26px;
-
-                                a {
-                                    text-decoration: none;
-                                    list-style: none;
+                            input {
+                                display: none;
+            
+                                &:checked+label .label-icon {
+                                    background: center / contain no-repeat url('../../../assets/btn-frame-banq.png');
+                                }
+                            }
+            
+                            label {
+                                .label-icon {
+                                    padding: 0;
+                                    border: none;
+                                    font: inherit;
+                                    color: inherit;
+                                    background-color: transparent;
                                     cursor: pointer;
+                                    width: 235px;
+                                    height: 40px;
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    margin: 5px auto;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    line-height: 1;
+                
+                                    &:active, &:hover, &:focus {
+                                        background: center / contain no-repeat url('../../../assets/btn-frame-banq.png');
+                                    }
+                
+                                    @media (max-width: 532px) {
+                                        font-size: 14px;
+                                    }
                                 }
                             }
                         }
 
                         .menu-delivery {
-                            margin-bottom: 60px;
+                            margin-bottom: 24px;
 
                             .btn-delivery {
                                 padding: 0;
@@ -117,7 +147,6 @@
                                 font-weight: 700;
             
                                 @media (max-width: 532px) {
-                                    margin: 5px;
                                     font-size: 14px;
                                 }
                             }
@@ -129,18 +158,18 @@
                         z-index: -1;
                         top: 24px;
                         left: 24px;
+
+                        @media (max-width: 510px) {
+                            top: 12px;
+                            left: 5px;
+                        }
                     }
                 }
 
                 @media (max-width: 1270px) {
                     width: 48vw;
                     padding-left: 15px;
-
-                    .menu-list {
-                        .menu-list-container {
-                            width: 400px;
-                        }
-                    }
+                    margin-bottom: 40px;
                 }
 
                 @media (max-width: 1023px) {
@@ -168,10 +197,73 @@
             }
 
             .menu-container--right {
-                width: 614px;
+                width: 765px;
 
-                @media (max-width: 1023px) {
+                @media (max-width: 1270px) {
                     width: 98%;
+                    margin: 0px 30px;
+                }
+
+                @media (max-width: 767px) {
+                    margin: 0px auto;
+                }
+
+                .menu-list-items {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    row-gap: 30px;
+                    column-gap: 20px;
+                    text-align: start;
+
+                    @media (max-width: 1270px) {
+                        grid-template-columns: 1fr;
+                        row-gap: 15px;
+                        column-gap: 10px;
+                    }
+
+                    .menu-list-item {
+                        
+                        .list-desc-price {
+                            display: flex;
+                            justify-content: space-between;
+
+                            h4 {
+                                font-weight: 600;
+                                font-size: 18px;
+                                text-transform: lowercase;
+
+                                @media (max-width: 767px) {
+                                    font-size: 16px;
+                                }
+    
+                                &::first-letter {
+                                    text-transform: uppercase;
+                                }
+                            }
+
+                            .list-price {
+                                font-weight: 600;
+                                font-size: 18px;
+                                align-self: flex-end;
+                                color: #d1a960;
+
+                                @media (max-width: 767px) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+
+                        p {
+                            font-weight: 400;
+                            font-size: 14px;
+                            opacity: 0.6;
+                            margin-top: 10px;
+
+                            @media (max-width: 767px) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
                 }
             }
         }

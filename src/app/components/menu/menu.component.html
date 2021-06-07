@@ -10,16 +10,62 @@
                 <div class="menu-list">
                     <div class="menu-list-container">
                         <div class="menu-list-top">
-                            <div value='Закуски' class='list-text'><a>Закуски</a></div>
-                            <div value='Салаты' class='list-text'><a>Салаты</a></div>
-                            <div value='Горячее' class='list-text'><a>Горячее</a></div>
-                            <div value='Супы' class='list-text'><a>Супы</a></div>
-                            <div value='Паста' class='list-text'><a>Паста</a></div>
-                            <div value='Пицца' class='list-text'><a>Пицца</a></div>
-                            <div value='Гарниры' class='list-text'><a>Гарниры</a></div>
-                            <div value='Десерты' class='list-text'><a>Десерты</a></div>
-                            <div value='Напитки' class='list-text'><a>Напитки</a></div>
-                            <div value='Алкоголь' class='list-text'><a>Алкоголь</a></div>
+                            <input type="radio" id="Холодныезакуски" name="menu" value="Холодныезакуски" [(ngModel)]="value">
+                            <label class="list-text" for="Холодныезакуски">
+                                <div class="label-icon"><span>Холодные закуски</span></div>
+                            </label>
+                            <input type="radio" id="Салаты" name="menu" value="Салаты" [(ngModel)]="value">
+                            <label class="list-text" for="Салаты">
+                                <div class="label-icon"><span>Салаты</span></div>
+                            </label>
+                            <input type="radio" id="Супы" name="menu" value="Супы" [(ngModel)]="value">
+                            <label class="list-text" for="Супы">
+                                <div class="label-icon"><span>Супы</span></div>
+                            </label>
+                            <input type="radio" id="хлебобулочные" name="menu" value="хлебобулочные" [(ngModel)]="value">
+                            <label class="list-text" for="хлебобулочные">
+                                <div class="label-icon"><span>Хлебобулочные изделия</span></div>
+                            </label>
+                            <input type="radio" id="Горячиезакуски" name="menu" value="Горячиезакуски" [(ngModel)]="value">
+                            <label class="list-text" for="Горячиезакуски">
+                                <div class="label-icon"><span>Горячие закуски</span></div>
+                            </label>
+                            <input type="radio" id="Паста" name="menu" value="Паста" [(ngModel)]="value">
+                            <label class="list-text" for="Паста">
+                                <div class="label-icon"><span>Паста</span></div>
+                            </label>
+                            <input type="radio" id="Пицца" name="menu" value="Пицца" [(ngModel)]="value">
+                            <label class="list-text" for="Пицца">
+                                <div class="label-icon"><span>Пицца (33см)</span></div>
+                            </label>
+                            <input type="radio" id="Горячиеблюда" name="menu" value="Горячиеблюда" [(ngModel)]="value">
+                            <label class="list-text" for="Горячиеблюда">
+                                <div class="label-icon"><span>Горячие блюда</span></div>
+                            </label>
+                            <input type="radio" id="Мангал" name="menu" value="Мангал" [(ngModel)]="value">
+                            <label class="list-text" for="Мангал">
+                                <div class="label-icon"><span>Мангал</span></div>
+                            </label>
+                            <input type="radio" id="Гарниры" name="menu" value="Гарниры" [(ngModel)]="value">
+                            <label class="list-text" for="Гарниры">
+                                <div class="label-icon"><span>Гарниры</span></div>
+                            </label>
+                            <input type="radio" id="Бургеры" name="menu" value="Бургеры" [(ngModel)]="value">
+                            <label class="list-text" for="Бургеры">
+                                <div class="label-icon"><span>Бургеры</span></div>
+                            </label>
+                            <input type="radio" id="Десерты" name="menu" value="Десерты" [(ngModel)]="value">
+                            <label class="list-text" for="Десерты">
+                                <div class="label-icon"><span>Десерты</span></div>
+                            </label>
+                            <input type="radio" id="Напитки" name="menu" value="Напитки" [(ngModel)]="value">
+                            <label class="list-text" for="Напитки">
+                                <div class="label-icon"><span>Напитки</span></div>
+                            </label>
+                            <input type="radio" id="Алкоголь" name="menu" value="Алкоголь" [(ngModel)]="value">
+                            <label class="list-text" for="Алкоголь">
+                                <div class="label-icon"><span>Алкоголь</span></div>
+                            </label>
                         </div>
                         <div class="menu-delivery">
                             <button class="btn-delivery">
@@ -33,6 +79,564 @@
                 </div>
             </div>
             <div class="menu-container--right">
+                <div *ngIf="value == 'Холодныезакуски'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Ассорти из свежих овощей помидоры, огурцы, болгарский перец. редис, зелень</h4>
+                            <div class="list-price">300.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Ассорти из солений огурцы, помидоры, квашеная капуста, чеснок</h4>
+                            <div class="list-price">290.00</div>
+                        </div>
+                        <p>(1/300)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Брускетта с томатами и соусом Песто</h4>
+                            <div class="list-price">230.00</div>
+                        </div>
+                        <p>(1/100)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Брускетта с лососем</h4>
+                            <div class="list-price">290.00</div>
+                        </div>
+                        <p>(1/115)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Сельдь с картофелем</h4>
+                            <div class="list-price">290.00</div>
+                        </div>
+                        <p>(1/200)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Ассорти из сыров моцарелла, пармезан, ламбер. дор блю, мед</h4>
+                            <div class="list-price">620.00</div>
+                        </div>
+                        <p>(1/200)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Сало деревенское с горчицей и хреном</h4>
+                            <div class="list-price">240.00</div>
+                        </div>
+                        <p>(1/160)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Отварной язык c хреном и соленым огурчиком</h4>
+                            <div class="list-price">390.00</div>
+                        </div>
+                        <p>(1/150)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Салаты'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Домашний овощной салат (огурцы, помидоры, лук, зелень, оливковое масло)</h4>
+                            <div class="list-price">320.00</div>
+                        </div>
+                        <p>(1/220)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Салат гриль (баклажаны, цукини, болгарский перец, вяленые томаты, сыр моцарелла, соус Песто)</h4>
+                            <div class="list-price">390.00</div>
+                        </div>
+                        <p>(1/330)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Цезарь с креветками (листья салатов Романо и Айсберг, креветки, соус Цезарь, сыр пармезан, гренки)</h4>
+                            <div class="list-price">540.00</div>
+                        </div>
+                        <p>(1/230)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>САЛАТ С МОРЕПРОДУКТАМИ (микс-салат, лосось, кальмары, креветки, каракатицы, мидии, помидоры черри, апельсин, цитрусовая заправка)</h4>
+                            <div class="list-price">670.00</div>
+                        </div>
+                        <p>(1/320)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>АНГЛИЙСКИЙ САЛАТ (куриное филе, яйца, шампиньоны, соленые огурчики, майонез)</h4>
+                            <div class="list-price">380.00</div>
+                        </div>
+                        <p>(1/260)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЦЕЗАРЬ С КУРИЦЕЙ (листья салатов Романо и Айсберг, куриная грудка, соус Цезарь, сыр пармезан, гренки)</h4>
+                            <div class="list-price">430.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>СТЕЙК-САЛАТ со сладкой горчицей (микс-салат, говяжья вырезка, помидоры черри, пикантный соус)</h4>
+                            <div class="list-price">490.00</div>
+                        </div>
+                        <p>(1/240)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Супы'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>КУРИНЫЙ СУП С ЛАПШОЙ</h4>
+                            <div class="list-price">230.00</div>
+                        </div>
+                        <p>(1/300)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>БОРЩ с салом и пампушками</h4>
+                            <div class="list-price">290.00</div>
+                        </div>
+                        <p>(1/390)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>СУП ПИТИ С БАРАНИНОЙ</h4>
+                            <div class="list-price">490.00</div>
+                        </div>
+                        <p>(1/480)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ТОМАТНЫЙ КРЕМ-СУП с моцареллой</h4>
+                            <div class="list-price">320.00</div>
+                        </div>
+                        <p>(1/330)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ГРИБНОЙ КРЕМ-СУП</h4>
+                            <div class="list-price">280.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>СУП С МОРЕПРОДУКТАМИ (мидии, креветки, кальмары, томаты, чеснок, орегано)</h4>
+                            <div class="list-price">490.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'хлебобулочные'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>БУЛОЧКА</h4>
+                            <div class="list-price">20.00</div>
+                        </div>
+                        <p>(1/1шт)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ХЛЕБНАЯ КОРЗИНА</h4>
+                            <div class="list-price">100.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ФОКАЧЧА</h4>
+                            <div class="list-price">290.00</div>
+                        </div>
+                        <p>(1/150)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ФОКАЧЧА с чесноком и розмарином</h4>
+                            <div class="list-price">180.00</div>
+                        </div>
+                        <p>(1/150)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Горячиезакуски'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>КРЕВЕТКИ НА ГРИЛЕ</h4>
+                            <div class="list-price">380.00</div>
+                        </div>
+                        <p>(1/5шт)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЧЕСНОЧНЫЕ ГРЕНКИ</h4>
+                            <div class="list-price">150.00</div>
+                        </div>
+                        <p>(1/8шт)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ХАЧАПУРИ c сулугуни и адыгейским сыром</h4>
+                            <div class="list-price">540.00</div>
+                        </div>
+                        <p>(1/580)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ХРУСТЯЩИЕ БАКЛАЖАНЫ (помидоры, баклажаны, соус сладкий Чили, зелень)</h4>
+                            <div class="list-price">330.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЖАРЕНЫЙ КАМАМБЕР с клюквенным соусом</h4>
+                            <div class="list-price">430.00</div>
+                        </div>
+                        <p>(1/155)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЖАРЕНЫЙ СУЛУГУНИ с ягодным соусом</h4>
+                            <div class="list-price">390.00</div>
+                        </div>
+                        <p>(1/260)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>КРЫЛЫШКИ BBQ</h4>
+                            <div class="list-price">320.00</div>
+                        </div>
+                        <p>(1/8шт)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>АССОРТИ К ПИВУ чесночные гренки, луковые кольца, наггетсы, крылья BBQ</h4>
+                            <div class="list-price">670.00</div>
+                        </div>
+                        <p>(1/540)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Паста'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>СПАГЕТТИ КАРБОНАРА</h4>
+                            <div class="list-price">470.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ПАППАРДЕЛЛЕ с телячьими щечками</h4>
+                            <div class="list-price">530.00</div>
+                        </div>
+                        <p>(1/270)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ФЕТТУЧЧИНЕ с лососем и брокколи в сливочном соусе, с икрой</h4>
+                            <div class="list-price">590.00</div>
+                        </div>
+                        <p>(1/280)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ФЕТТУЧЧИНЕ С КУРИЦЕЙ И ГРИБАМИ в сливочном соусе</h4>
+                            <div class="list-price">390.00</div>
+                        </div>
+                        <p>(1/275)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ФЕТТУЧЧИНЕ С ГОВЯДИНОЙ И ГРИБАМИ в сливочном соусе</h4>
+                            <div class="list-price">490.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>СПАГЕТТИ С МОРЕПРОДУКТАМИ (мидии, креветки, кальмары, томатный соус, сыр пармезан)</h4>
+                            <div class="list-price">490.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Пицца'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>МАРГАРИТА (томатный соус, сыр моцарелла)</h4>
+                            <div class="list-price">370.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ВЕТЧИНА С ГРИБАМИ (томатный соус, ветчина, шампиньоны, сыр моцарелла)</h4>
+                            <div class="list-price">450.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ПЕППЕРОНИ (томатный соус, колбаса пепперони, сыр моцарелла)</h4>
+                            <div class="list-price">470.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЦЕЗАРЬ (листья салата Айсберг, куриное филе, помидоры черри, соус Цезарь, сыр пармезан)</h4>
+                            <div class="list-price">470.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>МЯСНАЯ BBQ (ветчина, куриное филе, пепперони, колбаски, соус барбекю)</h4>
+                            <div class="list-price">640.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>4 СЫРА (моцарелла, дор блю, пармезан, ламбер)</h4>
+                            <div class="list-price">640.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Горячиеблюда'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>КОТЛЕТЫ ИЗ КРОЛИКА с картофельным пюре и грибным соусом</h4>
+                            <div class="list-price">620.00</div>
+                        </div>
+                        <p>(1/390)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ХИНКАЛИ С ГОВЯДИНОЙ</h4>
+                            <div class="list-price">420.00</div>
+                        </div>
+                        <p>(1/4шт)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>СВИНИНА С ОВОЩАМИ В ГОРШОЧКЕ (свинина, картофель, шампиньоны, лук, сыр, сливки)</h4>
+                            <div class="list-price">520.00</div>
+                        </div>
+                        <p>(1/450)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ТЕЛЯЧЬИ ЩЕЧКИ В СОУСЕ ДЕМИГЛАС с картофельным пюре</h4>
+                            <div class="list-price">680.00</div>
+                        </div>
+                        <p>(1/360)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ШИПЯЩАЯ СКОВОРОДКА С ГОВЯДИНОЙ И ОВОЩАМИ (говяжья вырезка, цукини, помидор, болгарский перец, морковь, лук, фирменный соус)</h4>
+                            <div class="list-price">620.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ТОМЛЕНАЯ НОЖКА ЯГНЕНКА с картофельным пюре и соусом Демиглас</h4>
+                            <div class="list-price">790.00</div>
+                        </div>
+                        <p>(1/~500)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>СТЕЙК ИЗ ЛОСОСЯ со шпинатом</h4>
+                            <div class="list-price">790.00</div>
+                        </div>
+                        <p>(1/310)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ДОРАДА/СИБАС НА ГРИЛЕ/НА ПАРУ</h4>
+                            <div class="list-price">820.00</div>
+                        </div>
+                        <p>(1/~350)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Мангал'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>АССОРТИ ШАШЛЫКОВ (куриный шашлык, шашлык из свинины, люля-кебаб из курицы и телятины)</h4>
+                            <div class="list-price">2250.00</div>
+                        </div>
+                        <p>(1/~1350)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>АССОРТИ ИЗ ЛЮЛЯ-КЕБАБ (люля-кебаб из курицы, телятины, баранины, баклажаны, цуккини, болгарский перец, шампиньоны)</h4>
+                            <div class="list-price">1850.00</div>
+                        </div>
+                        <p>(1/~1100)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ШАШЛЫК ИЗ СВИНИНЫ</h4>
+                            <div class="list-price">440.00</div>
+                        </div>
+                        <p>(1/~300)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЛЮЛЯ-КЕБАБ ИЗ ТЕЛЯТИНЫ</h4>
+                            <div class="list-price">490.00</div>
+                        </div>
+                        <p>(1/~300)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЛЮЛЯ-КЕБАБ ИЗ БАРАНИНЫ</h4>
+                            <div class="list-price">540.00</div>
+                        </div>
+                        <p>(1/~300)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ШАШЛЫК ИЗ БАРАНИНЫ</h4>
+                            <div class="list-price">540.00</div>
+                        </div>
+                        <p>(1/~300)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>БАРАНЬЯ КОРЕЙКА</h4>
+                            <div class="list-price">790.00</div>
+                        </div>
+                        <p>(1/~350)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>КУРИНЫЙ ШАШЛЫК</h4>
+                            <div class="list-price">390.00</div>
+                        </div>
+                        <p>(1/~300)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЛЮЛЯ-КЕБАБ ИЗ КУРИЦЫ</h4>
+                            <div class="list-price">390.00</div>
+                        </div>
+                        <p>(1/~300)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Гарниры'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>КАРТОФЕЛЬ БЭБИ НА МАНГАЛЕ</h4>
+                            <div class="list-price">150.00</div>
+                        </div>
+                        <p>(1/150)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ОВОЩИ ГРИЛЬ</h4>
+                            <div class="list-price">300.00</div>
+                        </div>
+                        <p>(1/250)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>КАРТОФЕЛЬ ФРИ</h4>
+                            <div class="list-price">120.00</div>
+                        </div>
+                        <p>(1/150)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Бургеры'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ДАРК БУРГЕР (Булочка с чернилами каракатицы, говяжья котлета, бекон, соленые огурчики, соус BBQ)</h4>
+                            <div class="list-price">280.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЧИЗБУРГЕР (Булочка, говяжья котлета, листья салата, помидор, соленый огурчики, сыр, лук, соус)</h4>
+                            <div class="list-price">280.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>ЧИКЕНБУРГЕР (Булочка, куриная котлета, листья салата, помидор, соленые огурчики, сыр, лук, соус)</h4>
+                            <div class="list-price">220.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>РИЧМОНД БУРГЕР (Булочка, 2 говяжьи котлеты, листья салата, помидор, соленые огурчики, 2 сыра, лук, соус)</h4>
+                            <div class="list-price">360.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>КИНГ РИЧМОНД БУРГЕР (Булочка, 2 говяжьи котлеты, 2 вида сыра, 3 вида салата, соленый огурчик, помидор, лук, 2 соуса, подается с картофелем фри)</h4>
+                            <div class="list-price">540.00</div>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Десерты'" class="menu-list-items">
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Сырники со сметаной</h4>
+                            <div class="list-price">200.00</div>
+                        </div>
+                        <p>(1/200)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Шоколадный Фондан</h4>
+                            <div class="list-price">380.00</div>
+                        </div>
+                        <p>(1/300)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Медовик</h4>
+                            <div class="list-price">310.00</div>
+                        </div>
+                        <p>(1/170)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Чизкейк</h4>
+                            <div class="list-price">290.00</div>
+                        </div>
+                        <p>(1/145)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Штрудель яблочный с мороженым</h4>
+                            <div class="list-price">390.00</div>
+                        </div>
+                        <p>(1/170)</p>
+                    </div>
+                    <div class="menu-list-item">
+                        <div class="list-desc-price">
+                            <h4>Мороженое (ваниль, клубника, шоколад)</h4>
+                            <div class="list-price">100.00</div>
+                        </div>
+                        <p>(1/50)</p>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Напитки'" class="menu-list-items"></div>
+                <div *ngIf="value === 'Алкоголь'" class="menu-list-items"></div>
             </div>
         </div>
     </div>
