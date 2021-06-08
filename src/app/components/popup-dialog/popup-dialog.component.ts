@@ -8,7 +8,7 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./popup-dialog.component.scss']
 })
 export class PopupDialogComponent implements OnInit {
-  buyTicketForm: FormGroup
+  buyTicketForm = new FormGroup({});
 
   constructor(public dialog: MatDialog) { }
 
