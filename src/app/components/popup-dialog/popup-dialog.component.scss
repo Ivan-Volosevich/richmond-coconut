@@ -74,6 +74,10 @@
 
                 input {
                     width: 184px;
+
+                    @media (max-width: 1024px) {
+                        border-radius: 0;
+                    }
                 }
             }
         }
@@ -109,6 +113,11 @@
                 @media (max-width: 532px) {
                     font-size: 14px;
                 }
+            }
+            
+            .submit-access {
+                color: green;
+                font-size: 14px;
             }
         }
 

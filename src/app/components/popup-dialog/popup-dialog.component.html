@@ -32,7 +32,10 @@
       </div>
     </div>
     <div class="btn-submit">
-      <button class="btn-booking-submit" type="submit" (click)='checkSubmit()' [disabled]="!bookingTableForm.valid">Забронировать столик</button>
+      <button class="btn-booking-submit" type="submit" (onclick)='checkSubmit()' [disabled]="!bookingTableForm.valid">Забронировать столик</button>
+      <div *ngIf='checkSubmit()' class="submit-access">
+        Отправлено
+      </div>
     </div>
     <div class="span-submit"><span>С вами свяжется администратор для подтверждения брони</span></div>
   </form>
