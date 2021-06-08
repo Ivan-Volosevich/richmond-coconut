@@ -64,3 +64,9 @@ button, label, input, a, select, svg, img {
       outline-offset: 0 !important;
   }
 }
+
+.cdk-overlay-container{
+  mat-dialog-container {
+    background-color: #000;
+  }
+}

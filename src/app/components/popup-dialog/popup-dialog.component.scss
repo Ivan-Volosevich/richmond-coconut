@@ -1,5 +1,7 @@
 .popup-dialog {
     position: relative;
+    color: #fff;
+    text-align: center;
 
     .mat-dialog-actions {
         padding: 0;
@@ -9,15 +11,15 @@
         box-sizing: content-box;
     }
     
-    h1, h2, h3, p, span, button {
+    h1, h2, h3, p, span, button, input {
         font-family: "Open Sans";
         font-style: normal;
     }
 
     .close-btn {
         position: absolute;
-        top: 0;
-        right: -25px;
+        top: -20px;
+        right: -24px;
         height: 22px;
         width: 22px;
         border: none;
@@ -26,5 +28,95 @@
         background-size: 69%;
         background-position: center;
         background-color: #000;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin: 20px auto 0;
+    }
+
+    form {
+
+        p {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 10px auto;
+            letter-spacing: 0.5px;
+        }
+
+        input {
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            height: 43px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 300;
+            border: none;
+            margin: 0 10px;
+        }
+
+        .form-name {
+
+            input {
+                width: 260px;
+            }
+        }
+
+        .form-date-time {
+
+            .form-date-time-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                input {
+                    width: 184px;
+                }
+            }
+        }
+
+        .form-phone {
+            input {
+                width: 260px;
+            }
+
+            .phone-alert {
+                color: red;
+                font-size: 14px;
+            }
+        }
+
+        .btn-submit {
+            margin: 20px auto 10px;
+            .btn-booking-submit {
+                padding: 0;
+                border: none;
+                font: inherit;
+                color: inherit;
+                background-color: transparent;
+                cursor: pointer;
+                width: 283px;
+                height: 54px;
+                background:center no-repeat url('../../../assets/btn-submit-frame.png'), center no-repeat url('../../../assets/btn-submit-icon.png');
+                background-size: 100%;
+                font-size: 16px;
+                font-weight: 700;
+                color: #000;
+
+                @media (max-width: 532px) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .span-submit {
+            span {
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
     }
 }

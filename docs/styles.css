@@ -2311,5 +2311,8 @@ button:active, button:hover, button:focus, label:active, label:hover, label:focu
   outline: 0 !important;
   outline-offset: 0 !important;
 }
+.cdk-overlay-container mat-dialog-container {
+  background-color: #000;
+}
 
 /*# sourceMappingURL=styles.css.map*/

@@ -2,45 +2,38 @@
   <mat-dialog-actions>
     <button mat-dialog-close class="close-btn"></button>
   </mat-dialog-actions>
-  <h2>Забронируйте столик в нашем ресторане</h2>
-  <form [formGroup]="buyTicketForm" novalidate>
-    <div>
-      <label>Passenger</label>
-      <input type="text" formControlName="passenger" />
+  <h2>Забронируйте столик<br>в нашем ресторане</h2>
+  <div class="title-frame">
+    <img src="./assets/title-frame.png" alt="">
+  </div>
+  <form [formGroup]="bookingTableForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-name">
+      <p>Введите ваше имя</p>
+      <input type="text" formControlName="clientName" placeholder="имя" />
+      <div class=""></div>
     </div>
-  
-    <div>
-      <label>Age</label>
-      <input type="number" formControlName="passengerAge" />
-    </div>
-  
-    <div formGroupName="passengerContacts">
-      <div>
-        <label>Telegram</label>
-        <input type="text" formControlName="telegram" />
+    <div class="form-date-time" formGroupName="dateAndTime">
+      <p>Введите дату и время</p>
+      <div class="form-date-time-container">
+        <div class="form-date">
+          <input type="date" formControlName="date">
+        </div>
+        <div class="form-time">
+          <!-- <label>Time</label> -->
+          <input type="time" formControlName="time" />
+        </div>
       </div>
-  
-      <div>
-        <label>Whatsapp</label>
-        <input type="text" formControlName="whatsapp" />
+    </div>
+    <div class="form-phone">
+      <p>Введите ваш номер телефона</p>
+      <input type="phone" formControlName="clientPhone" [imask]="{mask: '+{7}(000)000-00-00'}" [unmask]="true" placeholder="+7(***)***-**-**" />
+      <div *ngIf="bookingTableForm.controls['clientPhone'].invalid && bookingTableForm.controls['clientPhone'].touched" class="phone-alert">
+        Введите полный номер телефона
       </div>
     </div>
+    <div class="btn-submit">
+      <button class="btn-booking-submit" type="submit" (click)='checkSubmit()' [disabled]="!bookingTableForm.valid">Забронировать столик</button>
+    </div>
+    <div class="span-submit"><span>С вами свяжется администратор для подтверждения брони</span></div>
   </form>
-
-  <mat-dialog-content>
-    <h3>Введите ваше имя</h3>
-
-    <h3>Введите дату и время</h3>
-    <mat-form-field appearance="fill">
-      <mat-label>Введите дату</mat-label>
-      <input matInput [matDatepicker]="picker">
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-
-    <h3>Ввдите ваш номер телефона</h3>
-
-    <button>Забронировать столик</button>
-    <p>С вами свяжется администратор для подтверждения брони</p>
-  </mat-dialog-content>
 </div>

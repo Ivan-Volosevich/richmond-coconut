@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { OwlModule } from 'ngx-owl-carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -8,6 +9,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { IMaskModule } from 'angular-imask';
 // import { NgxGlideModule } from 'ngx-glide';
 
 import { AppComponent } from './app.component';
@@ -45,12 +47,14 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     AppRoutingModule,
     OwlModule,
     FormsModule,
+    ReactiveFormsModule,
     MatDialogModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
+    IMaskModule,
     // NgxGlideModule,
   ],
   providers: [
