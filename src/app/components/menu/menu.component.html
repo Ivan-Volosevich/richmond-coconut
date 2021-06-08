@@ -24,7 +24,7 @@
                             </label>
                             <input type="radio" id="хлебобулочные" name="menu" value="хлебобулочные" [(ngModel)]="value">
                             <label class="list-text" for="хлебобулочные">
-                                <div class="label-icon"><span>Хлебобулочные изделия</span></div>
+                                <div class="label-icon"><span>Хлебобулочные<br>изделия</span></div>
                             </label>
                             <input type="radio" id="Горячиезакуски" name="menu" value="Горячиезакуски" [(ngModel)]="value">
                             <label class="list-text" for="Горячиезакуски">
@@ -635,8 +635,510 @@
                         <p>(1/50)</p>
                     </div>
                 </div>
-                <div *ngIf="value === 'Напитки'" class="menu-list-items"></div>
-                <div *ngIf="value === 'Алкоголь'" class="menu-list-items"></div>
+                <div *ngIf="value === 'Напитки'" class="drinks-container">
+                    <div *ngIf="valuedrinks === 'drinks1'" class="menu-list-items">
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Свежевыжатые соки</h4>
+                                <div class="list-price"></div>
+                            </div>
+                            <p>(1/200мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Морковный</h5>
+                                <div class="list-price">230.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Яблочный</h5>
+                                <div class="list-price">250.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Грейпфрутовый</h5>
+                                <div class="list-price">250.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Апельсиновый</h5>
+                                <div class="list-price">250.00</div>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Чай</h4>
+                                <div class="list-price">250.00 / 420.00</div>
+                            </div>
+                            <p>(1/500мл / 1/1200мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Английский завтрак</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Эрл Грей</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Чабрец</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Сенча</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Зеленый Жасмин</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Молочный Улун</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Наглый Фрукт</h5>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Кофе</h4>
+                                <div class="list-price"></div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Американо</h5>
+                                <div class="list-price">120.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Эспрессо</h5>
+                                <div class="list-price">100.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Двойной Эспрессо</h5>
+                                <div class="list-price">180.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Капучино</h5>
+                                <div class="list-price">220.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Латте</h5>
+                                <div class="list-price">220.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Гляссе</h5>
+                                <div class="list-price">260.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Бейлис кофе</h5>
+                                <div class="list-price">310.00</div>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Нечайные чаи</h4>
+                                <div class="list-price">300.00 / 500.00</div>
+                            </div>
+                            <p>(1/500мл / 1/1200мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Каркаде</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Облепиховый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Имбирный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Малиновый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Ягодный</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="valuedrinks === 'drinks2'" class="menu-list-items">
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Молочные коктейли</h4>
+                                <div class="list-price">300.00</div>
+                            </div>
+                            <p>(1/200мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Ванильный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Шоколадный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Банановый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Манго</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Клубничный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Малиновый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Дыня</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Маракуйя</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Кокосовый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Личи</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Карамель</h5>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Лимонады</h4>
+                                <div class="list-price">300.00 / 500.00</div>
+                            </div>
+                            <p>(1/500мл / 1/1000мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Классический</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Маракуйя</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Манго</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Клубничный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Малиновый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Дыня</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Личи</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Ягодный Микс</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Имбирный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Мохито</h5>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Прохладительные напитки</h4>
+                                <div class="list-price"></div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Соки в ассортименте</h5>
+                                <div class="list-price">150.00</div>
+                            </div>
+                            <p>(1/200мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Эвиан</h5>
+                                <div class="list-price">200.00</div>
+                            </div>
+                            <p>(1/500мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Боржоми</h5>
+                                <div class="list-price">150.00</div>
+                            </div>
+                            <p>(1/500мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Морс</h5>
+                                <div class="list-price">120.00 / 500.00</div>
+                            </div>
+                            <p>(1/200мл / 1/1000мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Кола, Фанта, Спрайт</h5>
+                                <div class="list-price">120.00</div>
+                            </div>
+                            <p>(1/330мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Ред Булл, Адреналин</h5>
+                                <div class="list-price">150.00</div>
+                            </div>
+                            <p>(1/250мл)</p>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <div class="nav-first">
+                            <input type="radio" id="drinks1" name="drinks" valuedrinks="drinks1" [(ngModel)]="valuedrinks">
+                            <label class="btn-drinks" for="drinks1">
+                                <div class="label-icon"><span>1</span></div>
+                            </label>
+                        </div>
+                        <div class="nav-second">
+                            <input type="radio" id="drinks2" name="drinks" valuedrinks="drinks2" [(ngModel)]="valuedrinks">
+                            <label class="btn-drinks" for="drinks2">
+                                <div class="label-icon"><span>2</span></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="value === 'Алкоголь'" class="drinks-container">
+                    <div *ngIf="valuealcdrinks === 'alcdrinks1'" class="menu-list-items">
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Виски</h4>
+                                <div class="list-price"></div>
+                            </div>
+                            <p>(1/50)</p>
+                            <div class="list-desc-price">
+                                <h5>Баллантайнс</h5>
+                                <div class="list-price">280.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Вильям Лоусонс</h5>
+                                <div class="list-price">280.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Вильям Лоусонс Супер Спайсд</h5>
+                                <div class="list-price">310.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Гленморанджи Ориджинал</h5>
+                                <div class="list-price">320.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Джемесон</h5>
+                                <div class="list-price">300.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Джек Дэниэлс</h5>
+                                <div class="list-price">350.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Джек Дэниэлс Хани</h5>
+                                <div class="list-price">350.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Джим Бим</h5>
+                                <div class="list-price">320.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Джим Бим Double Oak</h5>
+                                <div class="list-price">350.00</div>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Чай</h4>
+                                <div class="list-price">250.00 / 420.00</div>
+                            </div>
+                            <p>(1/500мл / 1/1200мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Английский завтрак</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Эрл Грей</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Чабрец</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Сенча</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Зеленый Жасмин</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Молочный Улун</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Наглый Фрукт</h5>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Кофе</h4>
+                                <div class="list-price"></div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Американо</h5>
+                                <div class="list-price">120.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Эспрессо</h5>
+                                <div class="list-price">100.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Двойной Эспрессо</h5>
+                                <div class="list-price">180.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Капучино</h5>
+                                <div class="list-price">220.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Латте</h5>
+                                <div class="list-price">220.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Гляссе</h5>
+                                <div class="list-price">260.00</div>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Бейлис кофе</h5>
+                                <div class="list-price">310.00</div>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Нечайные чаи</h4>
+                                <div class="list-price">300.00 / 500.00</div>
+                            </div>
+                            <p>(1/500мл / 1/1200мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Каркаде</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Облепиховый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Имбирный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Малиновый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Ягодный</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="valuealcdrinks === 'alcdrinks2'" class="menu-list-items">
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Молочные коктейли</h4>
+                                <div class="list-price">300.00</div>
+                            </div>
+                            <p>(1/200мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Ванильный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Шоколадный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Банановый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Манго</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Клубничный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Малиновый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Дыня</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Маракуйя</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Кокосовый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Личи</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Карамель</h5>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Лимонады</h4>
+                                <div class="list-price">300.00 / 500.00</div>
+                            </div>
+                            <p>(1/500мл / 1/1000мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Классический</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Маракуйя</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Манго</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Клубничный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Малиновый</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Дыня</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Личи</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Ягодный Микс</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Имбирный</h5>
+                            </div>
+                            <div class="list-desc-price">
+                                <h5>Мохито</h5>
+                            </div>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Прохладительные напитки</h4>
+                                <div class="list-price"></div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Соки в ассортименте</h5>
+                                <div class="list-price">150.00</div>
+                            </div>
+                            <p>(1/200мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Эвиан</h5>
+                                <div class="list-price">200.00</div>
+                            </div>
+                            <p>(1/500мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Боржоми</h5>
+                                <div class="list-price">150.00</div>
+                            </div>
+                            <p>(1/500мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Морс</h5>
+                                <div class="list-price">120.00 / 500.00</div>
+                            </div>
+                            <p>(1/200мл / 1/1000мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Кола, Фанта, Спрайт</h5>
+                                <div class="list-price">120.00</div>
+                            </div>
+                            <p>(1/330мл)</p>
+                            <div class="list-desc-price">
+                                <h5>Ред Булл, Адреналин</h5>
+                                <div class="list-price">150.00</div>
+                            </div>
+                            <p>(1/250мл)</p>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <div class="nav-first">
+                            <input type="radio" id="alcdrinks1" name="drinks" valuealcdrinks="alcdrinks1" [(ngModel)]="valuealcdrinks">
+                            <label class="btn-drinks" for="alcdrinks1">
+                                <div class="label-icon"><span>1</span></div>
+                            </label>
+                        </div>
+                        <div class="nav-second">
+                            <input type="radio" id="alcdrinks2" name="drinks" valuealcdrinks="alcdrinks2" [(ngModel)]="valuealcdrinks">
+                            <label class="btn-drinks" for="alcdrinks2">
+                                <div class="label-icon"><span>2</span></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   value: string = 'Холодныезакуски';
+  valuedrinks: string = 'drinks1';
+  valuealcdrinks: string = 'alcdrinks1';
 
   constructor() { }
 
