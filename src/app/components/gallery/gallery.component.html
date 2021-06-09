@@ -11,24 +11,26 @@
             </div>
             <div class="gallery-slider">
                 <div *ngIf="value === 'gallery-nav1'" class="gallery-images">
-                    <div class="post-1">
-                        <img src="./assets/gallery-img-1.png" alt="">
-                    </div>
-                    <div class="post-2">
-                        <img src="./assets/gallery-img-2.png" alt="">
-                    </div>
-                    <div class="post-3">
-                        <img src="./assets/gallery-img-3.png" alt="">
-                    </div>
-                    <div class="post-4">
-                        <img src="./assets/gallery-img-4.png" alt="">
-                    </div>
-                    <div class="post-5">
-                        <img src="./assets/gallery-img-5.png" alt="">
-                    </div>
-                    <div class="post-6">
-                        <img src="./assets/gallery-img-6.png" alt="">
-                    </div>
+                    <ngx-gallery [options]="galleryOptions" NgxGalleryImageSize='contain' [images]="galleryImages">
+                        <div class="post-1">
+                            <img src="./assets/gallery-img-1.png" alt="">
+                        </div>
+                        <div class="post-2">
+                            <img src="./assets/gallery-img-2.png" alt="">
+                        </div>
+                        <div class="post-3">
+                            <img src="./assets/gallery-img-3.png" alt="">
+                        </div>
+                        <div class="post-4">
+                            <img src="./assets/gallery-img-4.png" alt="">
+                        </div>
+                        <div class="post-5">
+                            <img src="./assets/gallery-img-5.png" alt="">
+                        </div>
+                        <div class="post-6">
+                            <img src="./assets/gallery-img-6.png" alt="">
+                        </div>
+                    </ngx-gallery>
                 </div>
                 <div *ngIf="value === 'gallery-nav2'" class="gallery-images">
                     <div class="post-1">

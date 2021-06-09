@@ -2314,5 +2314,9 @@ button:active, button:hover, button:focus, label:active, label:hover, label:focu
 .cdk-overlay-container mat-dialog-container {
   background-color: #000;
 }
+.ngx-gallery {
+  display: inline-block;
+  margin-bottom: 20px;
+}
 
 /*# sourceMappingURL=styles.css.map*/
