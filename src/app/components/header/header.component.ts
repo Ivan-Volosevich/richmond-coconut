@@ -7,22 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  checked: boolean = false;
-  toggleChange = document.querySelector('toggle');
-  aLink = document.querySelectorAll('[data-link]');
+  navOpened: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  mmmm() {
-    this.aLink.forEach((b) => {
-      b.addEventListener('click', (e) => {
-        this.checked = this.checked? this.checked : false;
-      });
-    })
+  handleClick(e: any) {
+    if (e.target.nodeName == 'A') {
+      this.navOpened = false;
+      console.log('e ', this.navOpened)
+    }
   }
 
+  onNavToggle() {
+    this.navOpened = !this.navOpened;
+  }
 }
 

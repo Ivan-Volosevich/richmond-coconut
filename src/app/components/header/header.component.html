@@ -4,16 +4,16 @@
             <div class="header-logo"><img src="./assets/icon-rich.png" alt=""></div>
         </a>
         <nav>   
-            <input class="toggle" id="toggle-btn" type="checkbox">
+            <input (change)='onNavToggle()' [checked]='navOpened' class="toggle" id="toggle-btn" type="checkbox">
             <label for="toggle-btn"><div class="img"></div></label>
-            <ul>
-                <li><a href="#about" (data-link)='aLink'> О нас</a></li>
-                <li><a href="#banquet" (data-link)='aLink'>Банкетный зал</a></li>
-                <li><a href="#menu" (data-link)='aLink'>Меню</a></li>
-                <li><a href="#hotel" (data-link)='aLink'>Отель и SPA-комплекс</a></li>
-                <!-- <li><a href="#poster" (data-link)='aLink'>Афиша</a></li> -->
-                <li><a href="#gallery" (data-link)='aLink'>Галерея</a></li>
-                <li><a href="#contacts" (data-link)='aLink'>Контакты</a></li>
+            <ul (click)="handleClick($event)">
+                <li><a href="#about"> О нас</a></li>
+                <li><a href="#banquet">Банкетный зал</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#hotel">Отель и SPA-комплекс</a></li>
+                <!-- <li><a href="#poster">Афиша</a></li> -->
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#contacts">Контакты</a></li>
                 <li class="info-for-mobile">
                     <div class="for-mobile">
                         <div class="contacts-info">

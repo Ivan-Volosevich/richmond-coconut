@@ -8,12 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   value: string = 'Холодныезакуски';
-  valuedrinks: string = 'drinks1';
-  valuealcdrinks: string = 'alcdrinks1';
+  
+  selectedPage = '1';
+  selectedAlcoholPage = '1';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  setDrinksPage(n:string) {
+    this.selectedPage = n;
+  }
+
+  setAlcoholPage(n:string) {
+    this.selectedPage = n;
+  }
 }

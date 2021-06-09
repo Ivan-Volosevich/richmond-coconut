@@ -636,7 +636,7 @@
                     </div>
                 </div>
                 <div *ngIf="value === 'Напитки'" class="drinks-container">
-                    <div *ngIf="valuedrinks === 'drinks1'" class="menu-list-items">
+                    <div *ngIf="selectedPage === '1'" class="menu-list-items">
                         <div class="menu-list-item">
                             <div class="list-desc-price">
                                 <h4>Свежевыжатые соки</h4>
@@ -746,7 +746,7 @@
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="valuedrinks === 'drinks2'" class="menu-list-items">
+                    <div *ngIf="selectedPage === '2'" class="menu-list-items">
                         <div class="menu-list-item">
                             <div class="list-desc-price">
                                 <h4>Молочные коктейли</h4>
@@ -864,13 +864,13 @@
                     </div>
                     <div class="slider-nav">
                         <div class="nav-first">
-                            <input type="radio" id="drinks1" name="drinks" valuedrinks="drinks1" [(ngModel)]="valuedrinks" checked>
+                            <input type="radio" id="drinks1" name="drinks" (click)="setDrinksPage('1')" checked>
                             <label class="btn-drinks" for="drinks1">
                                 <div class="label-icon"><span>1</span></div>
                             </label>
                         </div>
                         <div class="nav-second">
-                            <input type="radio" id="drinks2" name="drinks" valuedrinks="drinks2" [(ngModel)]="valuedrinks">
+                            <input type="radio" id="drinks2" name="drinks" (click)="setDrinksPage('2')">
                             <label class="btn-drinks" for="drinks2">
                                 <div class="label-icon"><span>2</span></div>
                             </label>
@@ -878,7 +878,7 @@
                     </div>
                 </div>
                 <div *ngIf="value === 'Алкоголь'" class="drinks-container">
-                    <div *ngIf="valuealcdrinks === 'alcdrinks1'" class="menu-list-items">
+                    <div *ngIf="selectedAlcoholPage === '1'" class="menu-list-items">
                         <div class="menu-list-item">
                             <div class="list-desc-price">
                                 <h4>Виски</h4>
@@ -1000,7 +1000,7 @@
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="valuealcdrinks === 'alcdrinks2'" class="menu-list-items">
+                    <div *ngIf="selectedAlcoholPage === '2'" class="menu-list-items">
                         <div class="menu-list-item">
                             <div class="list-desc-price">
                                 <h4>Джин</h4>
@@ -1062,7 +1062,7 @@
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="valuealcdrinks === 'alcdrinks3'" class="menu-list-items">
+                    <div *ngIf="selectedAlcoholPage === '3'" class="menu-list-items">
                         <div class="menu-list-item">
                             <div class="list-desc-price">
                                 <h4>Коктейли</h4>
@@ -1138,19 +1138,19 @@
                     </div>
                     <div class="slider-nav">
                         <div class="nav-first">
-                            <input type="radio" id="alcdrinks1" name="drinks" valuealcdrinks="alcdrinks1" [(ngModel)]="valuealcdrinks">
+                            <input type="radio" id="alcdrinks1" name="alcohol" (click)="setAlcoholPage('1')">
                             <label class="btn-drinks" for="alcdrinks1">
                                 <div class="label-icon"><span>1</span></div>
                             </label>
                         </div>
                         <div class="nav-second">
-                            <input type="radio" id="alcdrinks2" name="drinks" valuealcdrinks="alcdrinks2" [(ngModel)]="valuealcdrinks">
+                            <input type="radio" id="alcdrinks2" name="alcohol" (click)="setAlcoholPage('2')">
                             <label class="btn-drinks" for="alcdrinks2">
                                 <div class="label-icon"><span>2</span></div>
                             </label>
                         </div>
                         <div class="nav-third">
-                            <input type="radio" id="alcdrinks3" name="drinks" valuealcdrinks="alcdrinks3" [(ngModel)]="valuealcdrinks">
+                            <input type="radio" id="alcdrinks3" name="alcohol" (click)="setAlcoholPage('3')">
                             <label class="btn-drinks" for="alcdrinks3">
                                 <div class="label-icon"><span>3</span></div>
                             </label>

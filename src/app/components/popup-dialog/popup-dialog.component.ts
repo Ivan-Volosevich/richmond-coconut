@@ -31,10 +31,19 @@ export class PopupDialogComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.bookingTableForm.valid) {
+      console.log('ye')
     let bookingTable = Object.assign(
       this.bookingTableForm.value
     );
+    //this.http.post('/send', bookingTable, () => {
+      //showConfirmation
+    //})
     console.log('Новая заявка на столик: ', bookingTable);
+    } else {
+      this.bookingTableForm.markAllAsTouched();
+    }
+    
   }
 
 }
