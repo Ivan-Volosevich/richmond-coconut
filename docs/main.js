@@ -2167,7 +2167,7 @@ class MenuComponent {
         this.selectedPage = n;
     }
     setAlcoholPage(n) {
-        this.selectedPage = n;
+        this.selectedAlcoholPage = n;
     }
 }
 MenuComponent.ɵfac = function MenuComponent_Factory(t) { return new (t || MenuComponent)(); };

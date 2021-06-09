@@ -22,6 +22,6 @@ export class MenuComponent implements OnInit {
   }
 
   setAlcoholPage(n:string) {
-    this.selectedPage = n;
+    this.selectedAlcoholPage = n;
   }
 }
