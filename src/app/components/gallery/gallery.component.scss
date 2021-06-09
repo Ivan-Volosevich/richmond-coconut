@@ -103,6 +103,10 @@
                     row-gap: 22px;
                     column-gap: 22px;
 
+                    img {
+                        cursor: pointer;
+                    }
+
                     @media (max-width: 1270px) {
                         grid-template-columns: 1fr 1fr;
                         grid-template-rows: 196px 196px 196px 196px;

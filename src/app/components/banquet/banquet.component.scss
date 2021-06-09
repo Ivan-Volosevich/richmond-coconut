@@ -108,6 +108,7 @@
             
                         img {
                             z-index: 2;
+                            cursor: pointer;
                         }
             
                         .banquet-frame {
@@ -156,6 +157,10 @@
                     .banquet-lil-images {
                         @media (max-width: 532px) {
                             display: flex;
+                        }
+
+                        img {
+                            cursor: pointer;
                         }
                         
                         .banquet-lil-image {

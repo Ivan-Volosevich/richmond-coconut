@@ -86,6 +86,7 @@
         
                     img {
                         z-index: 2;
+                        cursor: pointer;
                     }
         
                     .hotel-frame {
@@ -134,6 +135,10 @@
                 .hotel-lil-images {
                     @media (max-width: 532px) {
                         display: flex;
+                    }
+
+                    img {
+                        cursor: pointer;
                     }
                     
                     .hotel-lil-image {
