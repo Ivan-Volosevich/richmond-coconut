@@ -10,8 +10,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { IMaskModule } from 'angular-imask';
-import { NgxGalleryModule } from '@kolkov/ngx-gallery';
-// import { NgxGlideModule } from 'ngx-glide';
+import { LightboxModule } from 'ngx-lightbox';
+import { NgxLazyModule } from 'ngx-lazy-image';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -56,8 +56,8 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     MatFormFieldModule,
     MatInputModule,
     IMaskModule,
-    NgxGalleryModule,
-    // NgxGlideModule,
+    LightboxModule,
+    NgxLazyModule
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'ru-RU' }

@@ -28,6 +28,8 @@
     "bootstrap": "^5.0.1",
     "jquery": "^3.6.0",
     "ngx-glide": "^12.0.0",
+    "ngx-lazy-image": "^1.0.2",
+    "ngx-lightbox": "^2.3.0",
     "ngx-owl-carousel": "^2.0.7",
     "owl.carousel": "^2.3.4",
     "rxjs": "~6.6.0",
