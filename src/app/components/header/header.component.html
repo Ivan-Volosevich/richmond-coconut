@@ -7,15 +7,52 @@
             <input class="toggle" id="toggle-btn" type="checkbox">
             <label for="toggle-btn"><div class="img"></div></label>
             <ul>
-                <li><a href="#about"> О нас</a></li>
-                <li><a href="#banquet">Банкетный зал</a></li>
-                <li><a href="#menu">Меню</a></li>
-                <li><a href="#hotel">Отель и SPA-комплекс</a></li>
-                <li><a href="#poster">Афиша</a></li>
-                <li><a href="#gallery">Галерея</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#about" (data-link)='aLink'> О нас</a></li>
+                <li><a href="#banquet" (data-link)='aLink'>Банкетный зал</a></li>
+                <li><a href="#menu" (data-link)='aLink'>Меню</a></li>
+                <li><a href="#hotel" (data-link)='aLink'>Отель и SPA-комплекс</a></li>
+                <!-- <li><a href="#poster" (data-link)='aLink'>Афиша</a></li> -->
+                <li><a href="#gallery" (data-link)='aLink'>Галерея</a></li>
+                <li><a href="#contacts" (data-link)='aLink'>Контакты</a></li>
+                <li class="info-for-mobile">
+                    <div class="for-mobile">
+                        <div class="contacts-info">
+                            <div class="contacts-info-content">
+                                <div>
+                                    <img src="./assets/contacts-icon-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p>Адрес: Московская область, Одинцовский городской округ, село Юдино, Можайское шоссе, 55б, стр.2</p>
+                                </div>
+                            </div>
+                            <div class="contacts-info-content">
+                                <div>
+                                    <img src="./assets/contacts-icon-2.png" alt="">
+                                </div>
+                                <div>
+                                    <p>Телефон: +7 (977) 882-77-05</p>
+                                </div>
+                            </div>
+                            <div class="contacts-info-content">
+                                <div>
+                                    <img src="./assets/contacts-icon-3.png" alt="">
+                                </div>
+                                <div>
+                                    <p>
+                                        График:
+                                        <br>
+                                        Пн-вс 10:00 – 23:00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
+
+
+
         <div class="phones">
             <div class="phones-icon">
                 <img src="./assets/icon-phone-header.png" alt="">

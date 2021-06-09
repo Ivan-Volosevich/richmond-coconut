@@ -105,6 +105,10 @@ header {
                     font-weight: 800;
                     width: 100%;
 
+                    @media (min-width: 1024px) {
+                        display: flex;
+                    }
+
                     @media (max-width: 1023px) {
                         transform: translateX(0);
                         transition: 0.4s;
@@ -127,21 +131,17 @@ header {
                         }
                     }
 
-                    @media (max-width: 450px) {
+                    @media (max-width: 459px) {
                         li {
                             font-size: 28px;
                             padding: 12px 5px 10px;
                         }
                     }
 
-                    @media (max-width: 321px) {
+                    @media (max-width: 330px) {
                         li {
                             font-size: 24px;
                         }
-                    }
-
-                    @media (min-width: 1024px) {
-                        display: flex;
                     }
                 }
             }
@@ -185,6 +185,47 @@ header {
 
                         &:focus, &:hover {
                             color: #fff;
+                        }
+                    }
+                }
+
+                .info-for-mobile {
+                    .for-mobile {
+                        display: none;
+            
+                        @media (max-width: 1023px) {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            width: 95%;
+                            margin-right: 0;
+                        }
+            
+                            p {
+                                font-size: 18px;
+                                font-weight: 300;
+                                margin-bottom: 5px;
+                                line-height: 20px;
+                                letter-spacing: 0;
+
+                                @media (max-width: 459px) {
+                                    font-size: 16px;
+                                }
+            
+                                @media (max-width: 330px) {
+                                    font-size: 14px;
+                                }
+                            }
+            
+                        .contacts-info-content {
+                            display: flex;
+                            align-items: center;
+                            
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 0;
+                            }
                         }
                     }
                 }
@@ -254,7 +295,6 @@ header {
             background-color: rgb(58, 116, 0);
             color: #fff;
         }
-
     }
 }
 

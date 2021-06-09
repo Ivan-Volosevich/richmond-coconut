@@ -27,10 +27,7 @@ export class PopupDialogComponent implements OnInit {
   }
 
   checkSubmit() {
-    if (!this.bookingTableForm.valid) {
-      console.log('inval', this.bookingTableForm.controls['clientPhone'].invalid);
-      this.bookingTableForm.controls['clientPhone'].invalid;
-    }
+    console.log("I was clicked!")
   }
 
   onSubmit() {
