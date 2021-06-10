@@ -208,6 +208,12 @@ header {
                                 line-height: 20px;
                                 letter-spacing: 0;
 
+                                a {
+                                    font-weight: 300;
+                                    text-decoration: none;
+                                    color: #fff;
+                                }
+
                                 @media (max-width: 459px) {
                                     font-size: 16px;
                                 }

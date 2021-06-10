@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Ivan Volosevich\richmond-coconut\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! D:\Волосевич\CodeFolders\richmond-coconut\src\polyfills.ts */"hN/g");
 
 
 /***/ }),

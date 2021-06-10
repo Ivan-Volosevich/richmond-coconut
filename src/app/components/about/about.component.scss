@@ -131,6 +131,11 @@
 
                 .about-text {
                     margin-top: 18px;
+
+                    @media (max-width: 1023px) {
+                        margin-top: 50px;
+                    }
+
                     p {
                         font-size: 22px;
                         font-weight: 400;

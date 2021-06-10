@@ -845,6 +845,8 @@
                                 <div class="list-price">150.00</div>
                             </div>
                             <p>(1/500мл)</p>
+                        </div>
+                        <div class="menu-list-item">
                             <div class="list-desc-price">
                                 <h5>Морс</h5>
                                 <div class="list-price">120.00 / 500.00</div>
@@ -1061,8 +1063,6 @@
                                 <div class="list-price">250.00</div>
                             </div>
                         </div>
-                    </div>
-                    <div *ngIf="selectedAlcoholPage === '3'" class="menu-list-items">
                         <div class="menu-list-item">
                             <div class="list-desc-price">
                                 <h4>Коктейли</h4>
@@ -1084,6 +1084,8 @@
                                 <div class="list-price">320.00</div>
                             </div>
                             <p>(1/300)</p>
+                        </div>
+                        <div class="menu-list-item">
                             <div class="list-desc-price">
                                 <h5>Мохито</h5>
                                 <div class="list-price">400.00</div>
@@ -1104,6 +1106,15 @@
                                 <div class="list-price">320.00</div>
                             </div>
                             <p>(1/200)</p>
+                        </div>
+                    </div>
+                    <div *ngIf="selectedAlcoholPage === '3'" class="menu-list-items">
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Коктейли</h4>
+                                <div class="list-price"></div>
+                            </div>
+                            <p></p>
                             <div class="list-desc-price">
                                 <h5>Шоколад (водка, виски, ликер кофе, сироп шоколад)</h5>
                                 <div class="list-price">280.00</div>
@@ -1119,6 +1130,8 @@
                                 <div class="list-price">250.00</div>
                             </div>
                             <p>(1/100)</p>
+                        </div>
+                        <div class="menu-list-item">
                             <div class="list-desc-price">
                                 <h5>Электрошок (Джин, водка, текила, Блю кюросао, лимон, спрайт)</h5>
                                 <div class="list-price">380.00</div>
@@ -1135,10 +1148,64 @@
                             </div>
                             <p>(1/250)</p>
                         </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Разливное пиво</h4>
+                                <div class="list-price"></div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Левенбрау</h5>
+                                <div class="list-price">170.00 / 250.00</div>
+                            </div>
+                            <p>(0,3 / 0,5л)</p>
+                            <div class="list-desc-price">
+                                <h5>Ричмонд</h5>
+                                <div class="list-price">170.00 / 250.00</div>
+                            </div>
+                            <p>(0,3 / 0,5л)</p>
+                            <div class="list-desc-price">
+                                <h5>Стелла Артуа</h5>
+                                <div class="list-price">230.00 / 300.00</div>
+                            </div>
+                            <p>(0,3 / 0,5л)</p>
+                        </div>
+                        <div class="menu-list-item">
+                            <div class="list-desc-price">
+                                <h4>Шоты</h4>
+                                <div class="list-price"></div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Б-52</h5>
+                                <div class="list-price">250.00</div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Боярский</h5>
+                                <div class="list-price">250.00</div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Серебряная пуля</h5>
+                                <div class="list-price">250.00</div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Медуза</h5>
+                                <div class="list-price">250.00</div>
+                            </div>
+                            <p></p>
+                            <div class="list-desc-price">
+                                <h5>Хиросима</h5>
+                                <div class="list-price">250.00</div>
+                            </div>
+                            <p></p>
+                        </div>
                     </div>
                     <div class="slider-nav">
                         <div class="nav-first">
-                            <input type="radio" id="alcdrinks1" name="alcohol" (click)="setAlcoholPage('1')">
+                            <input type="radio" id="alcdrinks1" name="alcohol" (click)="setAlcoholPage('1')" checked>
                             <label class="btn-drinks" for="alcdrinks1">
                                 <div class="label-icon"><span>1</span></div>
                             </label>

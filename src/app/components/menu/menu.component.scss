@@ -294,7 +294,7 @@
                             font-weight: 400;
                             font-size: 14px;
                             opacity: 0.6;
-                            margin: 10px 0;
+                            margin-bottom: 10px;
 
                             @media (max-width: 767px) {
                                 font-size: 12px;
@@ -343,6 +343,10 @@
                                     font-size: 14px;
                                 }
                             }
+                        }
+
+                        .nav-first, .nav-second {
+                            margin-right: 5px;
                         }
                     }
                 }
