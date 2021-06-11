@@ -16,10 +16,17 @@
       <p>Выберите дату и время</p>
       <div class="form-date-time-container">
         <div class="form-date">
-          <input type="date" formControlName="date">
+          <div class="form-group">
+            <div class="input-group" (click)="d.toggle()">
+              <input class="form-control" placeholder="дата" formControlName="datePick"
+                     name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" type="button"></button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="form-time">
-          <!-- <label>Time</label> -->
           <input type="time" formControlName="time" />
         </div>
       </div>
@@ -33,7 +40,7 @@
     </div>
     <div class="btn-submit">
       <button class="btn-booking-submit" type="submit" (click)='checkSubmit()'>Забронировать столик</button>
-      <div *ngIf='' class="submit-access">
+      <div *ngIf='bookingTableForm.value===!null' class="submit-access">
         Отправлено
       </div>
     </div>

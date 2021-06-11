@@ -39,6 +39,7 @@
         font-weight: 700;
         letter-spacing: 0.5px;
         margin: 20px auto 0;
+        color: #fff;
 
         @media (max-width: 410px) {
             font-size: 16px;
@@ -114,12 +115,49 @@
                 input {
                     width: 184px;
 
-                    @media (max-width: 1024px) {
-                        border-radius: 0;
+                    @media (max-width: 600px) {
+                        margin: 10px auto;
                     }
+                }
+
+                .form-date {
+                    margin: 0 10px;
+                    /* Importing Bootstrap SCSS file. */
+                    @import '~bootstrap/scss/bootstrap';
 
                     @media (max-width: 600px) {
                         margin: 10px auto;
+                    }
+
+                    button.calendar, button.calendar:active {
+                        background: center no-repeat url(./../../../assets/datepicker-icon.png)!important;
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                    }
+                    .input-group-append {
+                        background-color: #fff;
+                        border-radius: 0 50px 50px 0;
+                        width: 44px;
+                    }
+
+                    input {
+                        width: 140px;
+                        margin: 0;
+                    }
+                }
+
+                .form-time {
+                    margin: 0 10px;
+
+                    @media (max-width: 600px) {
+                        margin: 10px auto;
+                    }
+
+                    nz-time-picker {
+                        width: 184px;
+                        height: 43px;
+                        border-radius: 50px;
                     }
                 }
             }

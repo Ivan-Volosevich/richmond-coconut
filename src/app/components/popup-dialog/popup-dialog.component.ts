@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FormControl, FormGroup, MinLengthValidator, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-popup-dialog',
@@ -9,16 +10,19 @@ import { Observable } from 'rxjs';
   styleUrls: ['./popup-dialog.component.scss']
 })
 export class PopupDialogComponent implements OnInit {
+  model: NgbDateStruct | undefined;
+
   bookingTableForm: FormGroup = new FormGroup({
     clientName: new FormControl(null, [Validators.minLength(2), Validators.maxLength(15)]),
     dateAndTime: new FormGroup({
-      date: new FormControl(null),
-      time: new FormControl(null),
+      datePick: new FormControl(null),
+      timePick: new FormControl(null),
     }),
     clientPhone: new FormControl(null, [Validators.required, Validators.minLength(11), Validators.maxLength(15)]),
   });
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {
+  }
 
   ngOnInit(): void {
     // this.bookingTableForm.valueChanges.subscribe((value: any) => console.log(value));
@@ -33,13 +37,13 @@ export class PopupDialogComponent implements OnInit {
   onSubmit() {
     if (this.bookingTableForm.valid) {
       console.log('ye')
-    let bookingTable = Object.assign(
+    let bookingTableResult = Object.assign(
       this.bookingTableForm.value
     );
-    //this.http.post('/send', bookingTable, () => {
+    //this.http.post('/send', bookingTableResult, () => {
       //showConfirmation
     //})
-    console.log('Новая заявка на столик: ', bookingTable);
+    console.log('Новая заявка на столик: ', bookingTableResult);
     } else {
       this.bookingTableForm.markAllAsTouched();
     }
