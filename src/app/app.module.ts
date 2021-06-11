@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { IMaskModule } from 'angular-imask';
 import { LightboxModule } from 'ngx-lightbox';
 import { NgxLazyModule } from 'ngx-lazy-image';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -57,7 +58,8 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     MatInputModule,
     IMaskModule,
     LightboxModule,
-    NgxLazyModule
+    NgxLazyModule,
+    NgbModule
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'ru-RU' }

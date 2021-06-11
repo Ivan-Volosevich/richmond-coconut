@@ -141,9 +141,15 @@
                         width: 44px;
                     }
 
-                    input {
-                        width: 140px;
+                    .input-group {
+                        width: 184px;
+                    }
+                    
+                    .form-control{
+                        border-radius: 50px 0 0 50px;
                         margin: 0;
+                        width: 140px;
+                        border: none;
                     }
                 }
 
@@ -152,12 +158,6 @@
 
                     @media (max-width: 600px) {
                         margin: 10px auto;
-                    }
-
-                    nz-time-picker {
-                        width: 184px;
-                        height: 43px;
-                        border-radius: 50px;
                     }
                 }
             }
