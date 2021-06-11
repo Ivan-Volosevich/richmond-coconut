@@ -1,7 +1,7 @@
 .banquet {
     height: 759px;
     width: 100%;
-    background: center url('./../../../assets/banquet-bg.png');
+    background: center / cover no-repeat url('./../../../assets/banquet-bg.png');
 
     @media (max-width: 1270px) {
         height: 100%;
@@ -26,11 +26,11 @@
                     margin-top: 67px;
 
                     @media (max-width: 905px) {
-                        margin-top: 0;
+                        margin-top: 33px;
                     }
 
                     @media (max-width: 767px) {
-                        width: 120px;
+                        width: 90px;
                     }
 
                     @media (max-width: 425px) {

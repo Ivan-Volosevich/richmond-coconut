@@ -25,12 +25,25 @@
                 img {
                     margin-top: 22px;
 
+                    @media (max-width: 905px) {
+                        margin-top: 0;
+                    }
+
                     @media (max-width: 767px) {
                         width: 120px;
                     }
 
-                    @media (max-width: 425px) {
-                        width: 60px;
+                    @media (max-width: 573px) {
+                        width: 80px;
+                    }
+
+                    @media (max-width: 492px) {
+                        width: 50px;
+                        margin-bottom: 2px;
+                    }
+
+                    @media (max-width: 359px) {
+                        width: 27px;
                     }
                 }
             }
@@ -41,14 +54,6 @@
                     font-weight: 700;
                     padding: 54px 13px 43px;
                     text-align: center;
-
-                    br {
-                        display: none;
-
-                        @media (max-width: 573px) {
-                            display: block;
-                        }
-                    }
 
                     @media (max-width: 1023px) {
                         font-size: 38px;
@@ -63,7 +68,7 @@
                         font-size: 26px;
                     }
 
-                    @media (max-width: 425px) {
+                    @media (max-width: 431px) {
                         font-size: 20px;
                     }
                 }
