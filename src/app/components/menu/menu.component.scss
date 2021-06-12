@@ -95,6 +95,10 @@
                         .menu-list-top {
                             @media (max-width: 767px) {
                                 display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                            }
+
+                            @media (max-width: 355px) {
                                 grid-template-columns: 1fr 1fr;
                             }
 
@@ -127,8 +131,22 @@
                                     &:active, &:hover, &:focus {
                                         background: center / contain no-repeat url('../../../assets/btn-frame-banq.png');
                                     }
-                
-                                    @media (max-width: 532px) {
+                                    
+                                    @media (max-width: 767px) {
+                                        width: 184px;
+                                    }
+
+                                    @media (max-width: 565px) {
+                                        font-size: 14px;
+                                        width: 150px;
+                                    }
+
+                                    @media (max-width: 460px) {
+                                        font-size: 12px;
+                                        width: 115px;
+                                    }
+
+                                    @media (max-width: 355px) {
                                         font-size: 14px;
                                         width: 150px;
                                     }
@@ -167,8 +185,8 @@
 
                         img {
                                 @media (max-width: 767px) {
-                                height: 424px;
-                                width: 470px;
+                                    height: 310px;
+                                    width: 545px;
                             }
                         }
 
@@ -201,7 +219,7 @@
                     }
                 }
 
-                @media (max-width: 540px) {
+                @media (max-width: 599px) {
                     .menu-list {
                         .menu-frame {
                             display: none;

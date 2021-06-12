@@ -55,13 +55,13 @@
         }
 
         @media (max-width: 631px) {
-          font-size: 20px;
+          font-size: 24px;
         }
 
         br {
           display: none;
 
-          @media (max-width: 455px) {
+          @media (max-width: 546px) {
             display: block;
           }
         }

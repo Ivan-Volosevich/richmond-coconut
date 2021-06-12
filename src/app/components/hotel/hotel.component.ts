@@ -12,9 +12,9 @@ export class HotelComponent implements OnInit {
   private _album: Array<any> = [];
   constructor(private _lightbox: Lightbox) {
     for (let i = 1; i <= 4; i++) {
-      const src = './assets/banquet-img-' + i + '.png';
+      const src = './assets/hotel-img-' + i + '.png';
       const caption = '' + i + ' / 4';
-      const thumb = './assets/banquet-img-' + i + '.png';
+      const thumb = './assets/hotel-img-' + i + '-min.png';
       const album = {
          src: src,
          caption: caption,
