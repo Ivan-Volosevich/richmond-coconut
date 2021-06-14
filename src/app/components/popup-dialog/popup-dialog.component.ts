@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { FormControl, FormGroup, MinLengthValidator, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import { matDatepickerAnimations } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-popup-dialog',
@@ -16,7 +17,7 @@ export class PopupDialogComponent implements OnInit {
     clientName: new FormControl(null, [Validators.minLength(2), Validators.maxLength(15)]),
     dateAndTime: new FormGroup({
       datePick: new FormControl(null),
-      timePick: new FormControl(null),
+      timePick: new FormControl(null, [Validators.minLength(2), Validators.maxLength(4)]),
     }),
     clientPhone: new FormControl(null, [Validators.required, Validators.minLength(11), Validators.maxLength(15)]),
   });
@@ -24,19 +25,12 @@ export class PopupDialogComponent implements OnInit {
   constructor(public dialog: MatDialog) {
   }
 
-  ngOnInit(): void {
-    // this.bookingTableForm.valueChanges.subscribe((value: any) => console.log(value));
+  ngOnInit(): void {}
 
-    // this.loginForm.reset()
-  }
-
-  checkSubmit() {
-    console.log("I was clicked!")
-  }
+  checkSubmit() {}
 
   onSubmit() {
     if (this.bookingTableForm.valid) {
-      console.log('ye')
     let bookingTableResult = Object.assign(
       this.bookingTableForm.value
     );

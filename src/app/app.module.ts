@@ -13,6 +13,7 @@ import { IMaskModule } from 'angular-imask';
 import { LightboxModule } from 'ngx-lightbox';
 import { NgxLazyModule } from 'ngx-lazy-image';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -28,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupDialogComponent } from './components/popup-dialog/popup-dialog.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { OWL_DATE_TIME_LOCALE } from 'ng-pick-datetime';
 
 @NgModule({
   declarations: [
@@ -59,10 +61,13 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     IMaskModule,
     LightboxModule,
     NgxLazyModule,
-    NgbModule
+    NgbModule,
+    OwlDateTimeModule, 
+    OwlNativeDateTimeModule,
   ],
   providers: [
-    { provide: MAT_DATE_LOCALE, useValue: 'ru-RU' }
+    { provide: MAT_DATE_LOCALE, useValue: 'ru-RU' },
+    {provide: OWL_DATE_TIME_LOCALE, useValue: 'ru-RU'},
   ],
   bootstrap: [AppComponent]
 })

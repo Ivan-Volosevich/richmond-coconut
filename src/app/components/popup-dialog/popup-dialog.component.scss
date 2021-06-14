@@ -156,6 +156,8 @@
                 .form-time {
                     margin: 0 10px;
 
+                    @import "~ng-pick-datetime/assets/style/picker.min.css";
+
                     @media (max-width: 600px) {
                         margin: 10px auto;
                     }
