@@ -13,7 +13,7 @@ import { matDatepickerAnimations } from '@angular/material/datepicker';
 export class PopupDialogComponent implements OnInit {
   model: NgbDateStruct | undefined;
 
-  bookingTableForm: FormGroup = new FormGroup({
+  bookingTableForm = new FormGroup({
     clientName: new FormControl(null, [Validators.minLength(2), Validators.maxLength(15)]),
     dateAndTime: new FormGroup({
       datePick: new FormControl(null),

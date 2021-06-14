@@ -27,7 +27,10 @@
           </div>
         </div>
         <div class="form-time">
-          <input [imask]="{mask: '00:00'}" [unmask]="true" placeholder="время" formControlName="timePick" />
+          <!-- <input placeholder="время" formControlName="timePick" /> -->
+
+          <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" formControlName="timePick">
+          <owl-date-time [pickerType]="'timer'" #dt1></owl-date-time>
         </div>
       </div>
     </div>

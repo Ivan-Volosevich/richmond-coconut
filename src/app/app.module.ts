@@ -67,7 +67,7 @@ import { OWL_DATE_TIME_LOCALE } from 'ng-pick-datetime';
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'ru-RU' },
-    {provide: OWL_DATE_TIME_LOCALE, useValue: 'ru-RU'},
+    {provide: OWL_DATE_TIME_LOCALE, useValue: 'ru'},
   ],
   bootstrap: [AppComponent]
 })

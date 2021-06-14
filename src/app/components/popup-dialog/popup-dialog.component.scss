@@ -240,5 +240,40 @@
 ::ng-deep {
     .dropdown-menu.show.ng-star-inserted {
         background-color: #d1a960;
-      }
+    }
+}
+
+::ng-deep {
+    .cdk-overlay-pane.owl-dt-popup {
+        background-color: #d1a960;
+        margin-left: 19px;
+        padding: 0 18px;
+    }
+
+    .owl-dt-control-button.owl-dt-control-arrow-button {
+        background-color: #d1a960;
+        border: none;
+    }
+
+    .owl-dt-timer-input {
+        width: 70px;
+        height: 20px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .owl-hidden-accessible {
+        display: none;
+    }
+
+    .owl-dt-container-buttons.owl-dt-container-row.ng-tns-c178-1.ng-star-inserted, .owl-dt-container-buttons.owl-dt-container-row.ng-tns-c178-2.ng-star-inserted, .owl-dt-container-buttons.owl-dt-container-row.ng-tns-c178-3.ng-star-inserted {
+        text-align: center;
+    }
+
+    .owl-dt-control-button-content{
+        svg {
+            width: 20px;
+            height: 13px;
+        }
+    }
 }

@@ -254,6 +254,8 @@
                             @media (max-width: 650px) {
                                 width: 98%;
                                 padding-left: 25px;
+                                display: flex;
+                                align-items: center;
 
                                 p {
                                     font-size: 13px;
