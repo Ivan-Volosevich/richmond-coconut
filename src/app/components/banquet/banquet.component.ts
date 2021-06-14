@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Lightbox, IAlbum} from 'ngx-lightbox';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupDialogHallComponent } from '../popup-dialog-hall/popup-dialog-hall.component';
 
 @Component({
   selector: 'app-banquet',
@@ -10,7 +12,7 @@ export class BanquetComponent implements OnInit {
 
   public albums: Array<IAlbum> = [];
   private _album: Array<any> = [];
-  constructor(private _lightbox: Lightbox) {
+  constructor(public dialog: MatDialog, private _lightbox: Lightbox) {
     for (let i = 1; i <= 4; i++) {
       const src = './assets/banquet-img-' + i + '.png';
       const caption = '' + i + ' / 4';
@@ -33,6 +35,10 @@ export class BanquetComponent implements OnInit {
   close(): void {
     // close lightbox programmatically
     this._lightbox.close();
+  }
+
+  openDialogHall() {
+    this.dialog.open(PopupDialogHallComponent);
   }
 
   ngOnInit(): void {

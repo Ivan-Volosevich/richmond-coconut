@@ -1,0 +1,281 @@
+.popup-dialog {
+    position: relative;
+    color: #fff;
+    text-align: center;
+
+    .mat-dialog-actions {
+        padding: 0;
+        display: block;
+        min-height: 0;
+        align-items: center;
+        box-sizing: content-box;
+    }
+    
+    h1, h2, h3, p, span, button, input {
+        font-family: "Open Sans";
+        font-style: normal;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: -20px;
+        right: -24px;
+        height: 22px;
+        width: 22px;
+        border: none;
+        border-radius: 4px;
+        background: url(./../../../assets/menu-icon-close.png) no-repeat;
+        background-size: 69%;
+        background-position: center;
+        background-color: #000;
+
+        @media (max-width: 410px) {
+            top: -10px;
+        }
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin: 20px auto 0;
+        color: #fff;
+
+        @media (max-width: 410px) {
+            font-size: 16px;
+            margin: 10px auto 0;
+        }
+    }
+
+    .title-frame {
+        img {
+            @media (max-width: 600px) {
+                width: 250px;
+            }
+
+            @media (max-width: 410px) {
+                width: 200px;
+            }
+        }
+    }
+
+    form {
+
+        p {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 10px auto;
+            letter-spacing: 0.5px;
+
+            @media (max-width: 410px) {
+                font-size: 14px;
+                margin: 5px auto;
+            }
+        }
+
+        input {
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            height: 43px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 300;
+            border: none;
+            margin: 0 10px;
+
+            @media (max-width: 410px) {
+                height: 30px;
+                font-size: 14px;
+            }
+        }
+
+        .form-name {
+
+            input {
+                width: 260px;
+
+                @media (max-width: 410px) {
+                    width: 188px;
+                }
+            }
+        }
+
+        .form-date-time {
+
+            .form-date-time-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (max-width: 600px) {
+                    flex-direction: column;
+                }
+
+                input {
+                    width: 184px;
+
+                    @media (max-width: 600px) {
+                        margin: 10px auto;
+                    }
+                }
+
+                .form-date {
+                    margin: 0 10px;
+                    /* Importing Bootstrap SCSS file. */
+                    @import '~bootstrap/scss/bootstrap';
+
+                    @media (max-width: 600px) {
+                        margin: 10px auto;
+                    }
+
+                    button.calendar, button.calendar:active {
+                        background: center no-repeat url(./../../../assets/datepicker-icon.png)!important;
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                    }
+                    .input-group-append {
+                        background-color: #fff;
+                        border-radius: 0 50px 50px 0;
+                        width: 54px;
+                    }
+
+                    .input-group {
+                        width: 184px;
+                    }
+                    
+                    .form-control{
+                        border-radius: 50px 0 0 50px;
+                        margin: 0;
+                        width: 140px;
+                        border: none;
+                    }
+                }
+
+                .form-time {
+                    margin: 0 10px;
+
+                    @import "~ng-pick-datetime/assets/style/picker.min.css";
+
+                    @media (max-width: 600px) {
+                        margin: 10px auto;
+                    }
+                }
+            }
+        }
+
+        .form-phone {
+            input {
+                width: 260px;
+
+                @media (max-width: 410px) {
+                    width: 188px;
+                }
+            }
+
+            .phone-alert {
+                color: red;
+                font-size: 14px;
+
+                @media (max-width: 410px) {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .btn-submit {
+            margin: 20px auto 10px;
+            @media (max-width: 410px) {
+                margin: 10px auto 0;
+            }
+            .btn-booking-submit {
+                padding: 0;
+                border: none;
+                font: inherit;
+                color: inherit;
+                background-color: transparent;
+                cursor: pointer;
+                width: 283px;
+                height: 54px;
+                background:center no-repeat url('../../../assets/btn-submit-frame.png'), center no-repeat url('../../../assets/btn-submit-icon.png');
+                background-size: 100%;
+                font-size: 16px;
+                font-weight: 700;
+                color: #000;
+
+                @media (max-width: 532px) {
+                    font-size: 14px;
+                }
+
+                @media (max-width: 410px) {
+                    width: 188px;
+                }
+            }
+            
+            .submit-access {
+                color: green;
+                font-size: 14px;
+
+                @media (max-width: 410px) {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .span-submit {
+            span {
+                font-size: 14px;
+                font-weight: 300;
+                letter-spacing: 0;
+
+                @media (max-width: 410px) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .dropdown-menu.show.ng-star-inserted {
+        background-color: #d1a960;
+    }
+}
+
+::ng-deep {
+    .cdk-overlay-pane.owl-dt-popup {
+        background-color: #d1a960;
+        margin-left: 19px;
+        padding: 0 18px;
+    }
+
+    .owl-dt-control-button.owl-dt-control-arrow-button {
+        background-color: #d1a960;
+        border: none;
+    }
+
+    .owl-dt-timer-input {
+        width: 70px;
+        height: 20px;
+        text-align: center;
+        margin-bottom: 5px;
+        border-radius: 50px;
+        border: none;
+    }
+
+    .owl-hidden-accessible {
+        display: none;
+    }
+
+    .owl-dt-container-buttons.owl-dt-container-row.ng-tns-c178-1.ng-star-inserted, .owl-dt-container-buttons.owl-dt-container-row.ng-tns-c178-2.ng-star-inserted, .owl-dt-container-buttons.owl-dt-container-row.ng-tns-c178-3.ng-star-inserted {
+        text-align: center;
+    }
+
+    .owl-dt-control-button-content{
+        svg {
+            width: 20px;
+            height: 13px;
+        }
+    }
+}

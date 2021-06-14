@@ -30,6 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupDialogComponent } from './components/popup-dialog/popup-dialog.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { OWL_DATE_TIME_LOCALE } from 'ng-pick-datetime';
+import { PopupDialogHallComponent } from './components/popup-dialog-hall/popup-dialog-hall.component';
+import { PopupDialogDeliveryComponent } from './components/popup-dialog-delivery/popup-dialog-delivery.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { OWL_DATE_TIME_LOCALE } from 'ng-pick-datetime';
     ContactsComponent,
     FooterComponent,
     PopupDialogComponent,
+    PopupDialogHallComponent,
+    PopupDialogDeliveryComponent,
   ],
   imports: [
     BrowserModule,
