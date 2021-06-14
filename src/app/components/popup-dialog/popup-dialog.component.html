@@ -29,7 +29,7 @@
         <div class="form-time">
           <!-- <input placeholder="время" formControlName="timePick" /> -->
 
-          <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" formControlName="timePick">
+          <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1" formControlName="timePick" placeholder="время" maxlength="5">
           <owl-date-time [pickerType]="'timer'" #dt1></owl-date-time>
         </div>
       </div>

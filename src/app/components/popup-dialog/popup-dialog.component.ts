@@ -34,9 +34,16 @@ export class PopupDialogComponent implements OnInit {
     let bookingTableResult = Object.assign(
       this.bookingTableForm.value
     );
+
+    let minutesWithZero = this.bookingTableForm.controls['dateAndTime'].value['timePick'].getMinutes();
+    if (this.bookingTableForm.controls['dateAndTime'].value['timePick'].getMinutes() <= 9) {
+      minutesWithZero = '0' + this.bookingTableForm.controls['dateAndTime'].value['timePick'].getMinutes();
+    }
+    let iNeed = this.bookingTableForm.controls['dateAndTime'].value['timePick'].getHours() + ':' + minutesWithZero;
     //this.http.post('/send', bookingTableResult, () => {
       //showConfirmation
     //})
+    console.log('Time: ', iNeed);
     console.log('Новая заявка на столик: ', bookingTableResult);
     } else {
       this.bookingTableForm.markAllAsTouched();
