@@ -31,20 +31,21 @@ export class PopupDialogDeliveryComponent implements OnInit {
 
   onSubmit() {
     if (this.bookingDeliveryForm.valid) {
-    let bookingDeliveryResult = Object.assign(
-      this.bookingDeliveryForm.value
-    );
+      let minutesWithZero = this.bookingDeliveryForm.controls['dateAndTime'].value['timePick'].getMinutes();
+      let hoursWithZero = this.bookingDeliveryForm.controls['dateAndTime'].value['timePick'].getHours();
+      if (minutesWithZero <= 9) {
+        minutesWithZero = '0' + minutesWithZero;
+      } else if (hoursWithZero <= 9) {
+        hoursWithZero = '0' + hoursWithZero;
+      }
+      let timeOfBooking = hoursWithZero + ':' + minutesWithZero;
 
-    let minutesWithZero = this.bookingDeliveryForm.controls['dateAndTime'].value['timePick'].getMinutes();
-    if (this.bookingDeliveryForm.controls['dateAndTime'].value['timePick'].getMinutes() <= 9) {
-      minutesWithZero = '0' + this.bookingDeliveryForm.controls['dateAndTime'].value['timePick'].getMinutes();
-    }
-    let iNeed = this.bookingDeliveryForm.controls['dateAndTime'].value['timePick'].getHours() + ':' + minutesWithZero;
-    //this.http.post('/send', bookingDeliveryResult, () => {
-      //showConfirmation
-    //})
-    console.log('Time: ', iNeed);
-    console.log('Новая заявка на столик: ', bookingDeliveryResult);
+      this.bookingDeliveryForm.get(['dateAndTime', 'timePick'])?.setValue(timeOfBooking);
+      //this.http.post('/send', bookingDeliveryResult, () => {
+        //showConfirmation
+      //})
+      console.log('Time: ', timeOfBooking);
+      console.log('Новая заявка на столик: ', this.bookingDeliveryForm.value);
     } else {
       this.bookingDeliveryForm.markAllAsTouched();
     }

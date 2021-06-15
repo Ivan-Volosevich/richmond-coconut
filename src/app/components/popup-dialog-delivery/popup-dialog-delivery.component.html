@@ -1,31 +1,33 @@
-<div class="popup-dialog">
-    <mat-dialog-actions>
-      <button mat-dialog-close class="close-btn"></button>
-    </mat-dialog-actions>
-    <h2>Оформите заявку<br>на доставку</h2>
-    <div class="span-submit"><span>Мы свяжемся с вами и примем заказ</span></div>
-    <div class="title-frame">
-      <img src="./assets/title-frame.png" alt="">
-    </div>
-    <form [formGroup]="bookingDeliveryForm" (ngSubmit)="onSubmit()" novalidate>
-      <div class="form-name">
-        <p>Введите ваше имя</p>
-        <input type="text" formControlName="clientName" placeholder="имя" maxlength="15" />
-        <div class=""></div>
+<!-- <noindex> -->
+  <div class="popup-dialog">
+      <mat-dialog-actions>
+        <button mat-dialog-close class="close-btn"></button>
+      </mat-dialog-actions>
+      <h2>Оформите заявку<br>на доставку</h2>
+      <div class="span-submit"><span>Мы свяжемся с вами и примем заказ</span></div>
+      <div class="title-frame">
+        <img src="./assets/title-frame.png" alt="">
       </div>
-      <div class="form-phone">
-        <p>Введите ваш номер телефона</p>
-        <input type="phone" formControlName="clientPhone" [imask]="{mask: '+{7}(000)000-00-00'}" [unmask]="true" placeholder="+7(***)***-**-**" />
-        <div *ngIf="bookingDeliveryForm.controls['clientPhone'].invalid && bookingDeliveryForm.controls['clientPhone'].touched" class="phone-alert">
-          Введите полный номер телефона
+      <form [formGroup]="bookingDeliveryForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-name">
+          <p>Введите ваше имя</p>
+          <input type="text" formControlName="clientName" placeholder="имя" maxlength="15" />
+          <div class=""></div>
         </div>
-      </div>
-      <div class="btn-submit">
-        <button class="btn-booking-submit" type="submit" (click)='checkSubmit()'>Оформить заявку</button>
-        <div *ngIf='bookingDeliveryForm.value===!null' class="submit-access">
-          Отправлено
+        <div class="form-phone">
+          <p>Введите ваш номер телефона</p>
+          <input type="phone" formControlName="clientPhone" [imask]="{mask: '+{7}(000)000-00-00'}" [unmask]="true" placeholder="+7(***)***-**-**" />
+          <div *ngIf="bookingDeliveryForm.controls['clientPhone'].invalid && bookingDeliveryForm.controls['clientPhone'].touched" class="phone-alert">
+            Введите полный номер телефона
+          </div>
         </div>
-      </div>
-      <div class="span-submit"><span>С вами свяжется администратор для подтверждения брони</span></div>
-    </form>
-</div>
+        <div class="btn-submit">
+          <button class="btn-booking-submit" type="submit" (click)='checkSubmit()'>Оформить заявку</button>
+          <div *ngIf='bookingDeliveryForm.value===!null' class="submit-access">
+            Отправлено
+          </div>
+        </div>
+        <div class="span-submit"><span>С вами свяжется администратор для подтверждения заказа</span></div>
+      </form>
+  </div>
+<!-- </noindex>   -->

@@ -266,6 +266,12 @@
                                 }
                             }
                         }
+
+                        .icon-container--icon {
+                            @media (max-width: 650px) {
+                                text-align: center;
+                            }
+                        }
                     }
                 }
             }

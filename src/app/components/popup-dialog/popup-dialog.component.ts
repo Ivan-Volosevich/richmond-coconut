@@ -31,22 +31,21 @@ export class PopupDialogComponent implements OnInit {
 
   onSubmit() {
     if (this.bookingTableForm.valid) {
+      let minutesWithZero = this.bookingTableForm.controls['dateAndTime'].value['timePick'].getMinutes();
+      let hoursWithZero = this.bookingTableForm.controls['dateAndTime'].value['timePick'].getHours();
+      if (minutesWithZero <= 9) {
+        minutesWithZero = '0' + minutesWithZero;
+      } else if (hoursWithZero <= 9) {
+        hoursWithZero = '0' + hoursWithZero;
+      }
+      let timeOfBooking = hoursWithZero + ':' + minutesWithZero;
 
-    let minutesWithZero = this.bookingTableForm.controls['dateAndTime'].value['timePick'].getMinutes();
-    let hoursWithZero = this.bookingTableForm.controls['dateAndTime'].value['timePick'].getHours();
-    if (minutesWithZero <= 9) {
-      minutesWithZero = '0' + minutesWithZero;
-    } else if (hoursWithZero <= 9) {
-      hoursWithZero = '0' + hoursWithZero;
-    }
-    let timeOfBooking = hoursWithZero + ':' + minutesWithZero;
-
-    this.bookingTableForm.get(['dateAndTime', 'timePick'])?.setValue(timeOfBooking);
-    //this.http.post('/send', this.bookingTableForm.value, () => {
-      //showConfirmation
-    //})
-    console.log('Time: ', timeOfBooking);
-    console.log('Новая заявка на столик: ', this.bookingTableForm.value);
+      this.bookingTableForm.get(['dateAndTime', 'timePick'])?.setValue(timeOfBooking);
+      //this.http.post('/send', this.bookingTableForm.value, () => {
+        //showConfirmation
+      //})
+      console.log('Time: ', timeOfBooking);
+      console.log('Новая заявка на столик: ', this.bookingTableForm.value);
     } else {
       this.bookingTableForm.markAllAsTouched();
     }
