@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { OwlModule } from 'ngx-owl-carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -68,6 +69,15 @@ import { PopupDialogDeliveryComponent } from './components/popup-dialog-delivery
     NgbModule,
     OwlDateTimeModule, 
     OwlNativeDateTimeModule,
+  ],
+  exports: [
+    PopupDialogComponent,
+    PopupDialogHallComponent,
+    PopupDialogDeliveryComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'ru-RU' },
