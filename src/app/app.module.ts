@@ -15,6 +15,7 @@ import { LightboxModule } from 'ngx-lightbox';
 import { NgxLazyModule } from 'ngx-lazy-image';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -69,6 +70,7 @@ import { PopupDialogDeliveryComponent } from './components/popup-dialog-delivery
     NgbModule,
     OwlDateTimeModule, 
     OwlNativeDateTimeModule,
+    HttpClientModule,
   ],
   exports: [
     PopupDialogComponent,

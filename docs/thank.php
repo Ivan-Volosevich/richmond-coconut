@@ -42,7 +42,7 @@ $mail = new PHPMailer;
     $mail->CHarSet = 'utf-8';
     $mail->XMailer = ' ';
     $mail->isSMTP();
-    $mail->Host       = 'smtp.yandex.ru';
+    $mail->Host       = 'smtp.yandex.ru'; //посмотреть, как подключить smtp (@mail.ru)
     $mail->SMTPAuth   = true;
     $mail->Username   = '!!!MAIL!!!';
     $mail->Password   = '!!!PASSWORD!!!';
