@@ -42,7 +42,7 @@ $mail = new PHPMailer;
     $mail->CHarSet = 'utf-8';
     $mail->XMailer = ' ';
     $mail->isSMTP();
-    $mail->Host       = 'smtp.yandex.ru';
+    $mail->Host       = 'smtp.yandex.ru'; //посмотреть, как подключить smtp (@mail.ru)
     $mail->SMTPAuth   = true;
     $mail->Username   = '!!!MAIL!!!';
     $mail->Password   = '!!!PASSWORD!!!';
@@ -52,7 +52,7 @@ $mail = new PHPMailer;
     //Recipients
     $mail->FromName = '--';
     $mail->From ='form@coconut.by';
-    $mail->addAddress('', 'Info Coconut');
+    $mail->addAddress('ivan.a.volosevich@mail.ru', 'Info Coconut');
     $mail->addAddress('--Заказчик - не отправлять письма со своей почты!!!', '--');
 
 
