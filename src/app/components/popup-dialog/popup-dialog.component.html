@@ -42,7 +42,7 @@
       </div>
       <div class="btn-submit">
         <button class="btn-booking-submit" type="submit" (click)='checkSubmit()'>Забронировать столик</button>
-        <div *ngIf='bookingTableForm.value!==""' class="submit-access">
+        <div *ngIf='bookingTableForm.value===!null' class="submit-access">
           Отправлено
         </div>
       </div>
