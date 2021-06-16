@@ -3,13 +3,16 @@ import { HttpClient, HttpEventType, HttpRequest, HttpResponse } from '@angular/c
 import { Observable, Subject, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Config } from 'protractor';
+import { PopupDialogComponent } from '../../components/popup-dialog/popup-dialog.component';
+import { PopupDialogHallComponent } from '../../components/popup-dialog-hall/popup-dialog-hall.component';
+import { PopupDialogDeliveryComponent } from '../../components/popup-dialog-delivery/popup-dialog-delivery.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
   configService: any;
-  config!: { clientName: string; clientPhone: any; datePick: any; timePick: any; };
+  config!: { bookingTableForm: any; bookingDeliveryForm: any; bookingHallForm: any; };
   httpClient: any;
   configUrl = './thank.php';
 
@@ -27,28 +30,19 @@ export class ConfigService {
   showConfig() {
     this.configService.getConfig()
       .subscribe((data: Config) => this.config = {
-          clientName: data.clientName,
-          clientPhone:  data.clientPhone,
-          datePick: data.datePick,
-          timePick: data.timePick,
+        bookingTableForm: data.bookingTableForm,
+        bookingDeliveryForm:  data.bookingDeliveryForm,
+          bookingHallForm: data.bookingHallForm,
       });
   }
 
-  // public post(url: string, file: File): Observable<number>{
+  public post(configUrl: string): Observable<number>{
 
-  //   var subject = new Subject<number>()
-  //   const req = new HttpRequest('POST', url, file, {
-  //       reportProgress: true,
-  //   });
+    var subject = new Subject<number>()
+    const req = new HttpRequest('POST', configUrl, {
+        reportProgress: true,
+    });
 
-  //   this.httpClient.request(req).subscribe(event => {
-  //       if (event.type === HttpEventType.UploadProgress) {
-  //           const percentDone = Math.round(100 * event.loaded / event.total);
-  //           subject.next(percentDone);
-  //         } else if (event instanceof HttpResponse) {
-  //           subject.complete();
-  //         }
-  //   });
-  //   return subject.asObservable();
-  // }
+    return subject.asObservable();
+  }
 }

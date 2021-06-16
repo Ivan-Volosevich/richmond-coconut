@@ -4,6 +4,7 @@ import { FormControl, FormGroup, MinLengthValidator, Validators } from '@angular
 import { Observable } from 'rxjs';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 import { matDatepickerAnimations } from '@angular/material/datepicker';
+import { ConfigService } from '../../services/config/config.service';
 
 @Component({
   selector: 'app-popup-dialog-hall',
@@ -22,7 +23,7 @@ export class PopupDialogHallComponent implements OnInit {
     clientPhone: new FormControl(null, [Validators.required, Validators.minLength(11), Validators.maxLength(15)]),
   });
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private config: ConfigService) {
   }
 
   ngOnInit(): void {}
@@ -44,8 +45,7 @@ export class PopupDialogHallComponent implements OnInit {
       //this.http.post('/send', bookingHallForm, () => {
         //showConfirmation
       //})
-      console.log('Time: ', timeOfBooking);
-      console.log('Новая заявка на столик: ', this.bookingHallForm.value);
+      this.bookingHallForm.value
     } else {
       this.bookingHallForm.markAllAsTouched();
     }

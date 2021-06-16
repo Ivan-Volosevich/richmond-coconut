@@ -4,6 +4,7 @@ import { FormControl, FormGroup, MinLengthValidator, Validators } from '@angular
 import { Observable } from 'rxjs';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 import { matDatepickerAnimations } from '@angular/material/datepicker';
+import { ConfigService } from '../../services/config/config.service';
 
 @Component({
   selector: 'app-popup-dialog-delivery',
@@ -15,14 +16,10 @@ export class PopupDialogDeliveryComponent implements OnInit {
 
   bookingDeliveryForm = new FormGroup({
     clientName: new FormControl(null, [Validators.minLength(2), Validators.maxLength(15)]),
-    dateAndTime: new FormGroup({
-      datePick: new FormControl(null),
-      timePick: new FormControl(null, [Validators.minLength(2), Validators.maxLength(4)]),
-    }),
     clientPhone: new FormControl(null, [Validators.required, Validators.minLength(11), Validators.maxLength(15)]),
   });
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private config: ConfigService) {
   }
 
   ngOnInit(): void {}
@@ -31,21 +28,7 @@ export class PopupDialogDeliveryComponent implements OnInit {
 
   onSubmit() {
     if (this.bookingDeliveryForm.valid) {
-      let minutesWithZero = this.bookingDeliveryForm.controls['dateAndTime'].value['timePick'].getMinutes();
-      let hoursWithZero = this.bookingDeliveryForm.controls['dateAndTime'].value['timePick'].getHours();
-      if (minutesWithZero <= 9) {
-        minutesWithZero = '0' + minutesWithZero;
-      } else if (hoursWithZero <= 9) {
-        hoursWithZero = '0' + hoursWithZero;
-      }
-      let timeOfBooking = hoursWithZero + ':' + minutesWithZero;
-
-      this.bookingDeliveryForm.get(['dateAndTime', 'timePick'])?.setValue(timeOfBooking);
-      //this.http.post('/send', bookingDeliveryResult, () => {
-        //showConfirmation
-      //})
-      console.log('Time: ', timeOfBooking);
-      console.log('Новая заявка на столик: ', this.bookingDeliveryForm.value);
+      this.bookingDeliveryForm.value
     } else {
       this.bookingDeliveryForm.markAllAsTouched();
     }
