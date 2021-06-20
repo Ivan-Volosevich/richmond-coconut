@@ -51,8 +51,9 @@ $mail = new PHPMailer;
 
     //Recipients
     $mail->FromName = '--';
-    $mail->From ='form@coconut.by';
+    $mail->From ='info@richmond-rest.ru';
     $mail->addAddress('info@richmond-rest.ru', 'Info Coconut');
+    $mail->addAddress('test@richmond-rest.ru');
     $mail->addAddress('--Заказчик - не отправлять письма со своей почты!!!', '--');
 
 
