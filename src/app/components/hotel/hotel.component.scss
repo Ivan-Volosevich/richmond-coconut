@@ -1,14 +1,14 @@
 .hotel {
     height: 648px;
     width: 100%;
-    background-color: #000;
+    background-color: #fff;
 
     @media (max-width: 1270px) {
         height: 100%;
     }
 
     .hotel-container {
-        color: #fff;
+        color: #000;
         width: 1225px;
         margin: auto;
 

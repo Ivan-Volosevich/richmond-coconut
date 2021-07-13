@@ -1,11 +1,12 @@
 .hero {
-  height: 919px;
+  height: 796px;
   width: 100%;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../../../assets/hero-bg.png);
-  background-position: center;
+  background-position: center 90%;
 
   @media (max-width: 1242px) {
     height: 100%;
+    background-position: center 65%;
   }
   
   .hero-container {
@@ -33,37 +34,67 @@
       margin-top: 17px;
       text-align: center;
 
-      h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: #fff;
+      .hero-icons {
+        display: flex;
+        justify-content: space-evenly;
 
-        @media (max-width: 1242px) {
-          font-size: 45px;
+        @media (max-width: 1270px) {
+            margin-bottom: 20px;
         }
 
-        @media (max-width: 1064px) {
-          font-size: 38px;
+        @media (max-width: 800px) {
+            flex-direction: column;
+            align-items: baseline;
         }
 
-        @media (max-width: 905px) {
-          font-size: 32px;
-        }
+        .icon-container {
+            width: 243px;
 
-        @media (max-width: 768px) {
-          font-size: 26px;
-        }
+            @media (max-width: 800px) {
+              width: 98%;
+            }
 
-        @media (max-width: 631px) {
-          font-size: 24px;
-        }
+            .icon-container--text {
+                width: 100%;
+                p {
+                    font-size: 16px;
+                    font-weight: 700;
+                }
 
-        br {
-          display: none;
+                @media (max-width: 800px) {
+                    width: 98%;
+                    margin: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
 
-          @media (max-width: 546px) {
-            display: block;
-          }
+            .icon-container--description {
+              max-width: 243px;
+              font-size: 14px;
+              font-weight: 400;
+              margin: 5px auto;
+
+              @media (max-width: 800px) {
+                max-width: 320px;
+
+                br {
+                  display: none;
+                }
+              }
+
+              a {
+                text-decoration: none;
+                color: #fff;
+              }
+            }
+
+            .icon-container--icon {
+                @media (max-width: 800px) {
+                    text-align: center;
+                }
+            }
         }
       }
     }

@@ -20,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
-import { AboutComponent } from './components/about/about.component';
 import { BanquetComponent } from './components/banquet/banquet.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HotelComponent } from './components/hotel/hotel.component';
@@ -40,7 +39,6 @@ import { PopupDialogDeliveryComponent } from './components/popup-dialog-delivery
     AppComponent,
     HeaderComponent,
     HeroComponent,
-    AboutComponent,
     BanquetComponent,
     MenuComponent,
     HotelComponent,

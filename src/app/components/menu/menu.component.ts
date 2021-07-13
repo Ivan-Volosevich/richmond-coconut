@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { PopupDialogDeliveryComponent } from '../popup-dialog-delivery/popup-dialog-delivery.component';
+// import { PopupDialogDeliveryComponent } from '../popup-dialog-delivery/popup-dialog-delivery.component';
 
 @Component({
   selector: 'app-menu',
@@ -27,7 +27,7 @@ export class MenuComponent implements OnInit {
     this.selectedAlcoholPage = n;
   }
 
-  openDialogDelivery() {
-    this.dialog.open(PopupDialogDeliveryComponent);
-  }
+  // openDialogDelivery() {
+  //   this.dialog.open(PopupDialogDeliveryComponent);
+  // }
 }

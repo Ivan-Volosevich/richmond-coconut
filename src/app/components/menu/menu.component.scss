@@ -1,14 +1,14 @@
 .menu {
     height: 100%;
     width: 100%;
-    background-color: #fff;
+    background-color: #000;
 
     @media (max-width: 1270px) {
         height: 100%;
     }
 
     .menu-container {
-        color: #000;
+        color: #fff;
         width: 1225px;
         margin: auto;
 
@@ -70,7 +70,7 @@
             text-align: center;
             display: flex;
             justify-content: space-evenly;
-            margin-bottom: 40px;
+            padding-bottom: 80px;
 
             @media (max-width: 767px) {
                 flex-direction: column;
@@ -87,7 +87,7 @@
                         z-index: 2;
                         width: 310px;
                         height: 697px;
-                        background-color: #EEECEA;
+                        background-color: #1F1F1F;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
@@ -161,7 +161,7 @@
                                 padding: 0;
                                 border: none;
                                 font: inherit;
-                                color: inherit;
+                                color: #000;
                                 background-color: transparent;
                                 cursor: pointer;
                                 width: 224px;
@@ -325,7 +325,7 @@
                     .slider-nav {
                         display: flex;
                         justify-content: space-between;
-                        margin: 31px auto 92px;
+                        margin: 31px auto;
                         width: 60px;
     
                         @media (max-width: 1270px) {
