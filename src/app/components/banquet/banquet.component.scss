@@ -74,16 +74,7 @@
                 h3 {
                     font-size: 22px;
                     font-weight: 700;
-
-                    @media (max-width: 767px) {
-                        font-size: 16px;
-                    }
-                }
-
-                h4 {
-                    font-size: 22px;
-                    font-weight: 700;
-                    margin: 20px auto;
+                    padding-bottom: 50px;
 
                     @media (max-width: 767px) {
                         font-size: 16px;
@@ -93,6 +84,7 @@
 
             .banquet-first-hall {
                 display: flex;
+                justify-content: center;
             
                 @media (max-width: 1023px) {
                     flex-direction: column;
@@ -215,6 +207,17 @@
             
                     .banquet-text {
                         text-align: start;
+
+                        h4 {
+                            font-size: 22px;
+                            font-weight: 700;
+                            margin: 0 auto 20px;
+                            text-align: center;
+        
+                            @media (max-width: 767px) {
+                                font-size: 16px;
+                            }
+                        }
             
                         p {
                             font-size: 22px;
@@ -237,11 +240,7 @@
                     }
             
                     .banquet-btn {
-                        text-align: end;
-
-                        @media (max-width: 767px) {
-                            text-align: center;
-                          }
+                        text-align: center;
                   
                         .btn-booking {
                           max-width: 278px;

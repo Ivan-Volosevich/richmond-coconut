@@ -38,10 +38,12 @@ header {
         }
 
         nav {
+            margin-right: 250px;
 
             @media (max-width: 1023px) {
                 width: 0;
                 height: 0;
+                margin-right: 0;
             }
 
             // .contacts-menu {
