@@ -84,7 +84,7 @@
 
             .banquet-first-hall {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
             
                 @media (max-width: 1023px) {
                     flex-direction: column;
@@ -209,20 +209,23 @@
                         text-align: start;
 
                         h4 {
-                            font-size: 22px;
+                            font-size: 24px;
                             font-weight: 700;
-                            margin: 0 auto 20px;
-                            text-align: center;
+                            margin: 0 auto 10px;
+
+                            @media (max-width: 1023px) {
+                                text-align: center;
+                            }
         
                             @media (max-width: 767px) {
-                                font-size: 16px;
+                                font-size: 20px;
                             }
                         }
             
                         p {
                             font-size: 22px;
                             font-weight: 400;
-                            margin-bottom: 31px;
+                            line-height: 164%;
             
                             @media (max-width: 1270px) {
                                 font-size: 20px;
@@ -240,7 +243,11 @@
                     }
             
                     .banquet-btn {
-                        text-align: center;
+                        text-align: left;
+
+                        @media (max-width: 1023px) {
+                            text-align: center;
+                        }
                   
                         .btn-booking {
                           max-width: 278px;
@@ -259,8 +266,7 @@
                           }
                   
                           @media (max-width: 1242px) {
-                            margin-top: 0;
-                            margin-bottom: 44px;
+                            margin-bottom: 34px;
                             width: 90%;
                   
                             img {
