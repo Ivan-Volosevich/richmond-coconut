@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 import { matDatepickerAnimations } from '@angular/material/datepicker';
 import { ConfigService } from '../../services/config/config.service';
+import { HttpClient } from '@angular/common/http';
+import { PopupService } from './popup.service';
 
 @Component({
   selector: 'app-popup-dialog',
@@ -13,6 +15,9 @@ import { ConfigService } from '../../services/config/config.service';
 })
 export class PopupDialogComponent implements OnInit {
   model: NgbDateStruct | undefined;
+  postData: any;
+  thankUrl = './thank.php';
+  httpOptions: any;
 
   bookingTableForm = new FormGroup({
     clientName: new FormControl(null, [Validators.minLength(2), Validators.maxLength(15)]),
@@ -23,10 +28,14 @@ export class PopupDialogComponent implements OnInit {
     clientPhone: new FormControl(null, [Validators.required, Validators.minLength(11), Validators.maxLength(15)]),
   });
 
-  constructor(public dialog: MatDialog, private config: ConfigService) {
+  constructor(public dialog: MatDialog, private config: ConfigService, private http: HttpClient) {
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.http.post<any>(this.thankUrl, {title: 'POST message'}).subscribe(data => {
+      this.postData = this.bookingTableForm.value;
+    })
+  }
 
   checkSubmit() {}
 
@@ -42,14 +51,13 @@ export class PopupDialogComponent implements OnInit {
       let timeOfBooking = hoursWithZero + ':' + minutesWithZero;
 
       this.bookingTableForm.get(['dateAndTime', 'timePick'])?.setValue(timeOfBooking);
-      //this.http.post('/send', this.bookingTableForm.value, () => {
-        //showConfirmation
-      //})
-      this.bookingTableForm.value
+      this.bookingTableForm.value;
+      this.http.post(this.thankUrl, this.bookingTableForm.value, this.httpOptions);
+      this.bookingTableForm.reset();
     } else {
       this.bookingTableForm.markAllAsTouched();
     }
-    
+
   }
 
 }
